@@ -1,0 +1,17 @@
+disease,horizon,model,median,mean,n
+chlamydia,1,fractional,11.09,14.62,204
+chlamydia,1,integer,11.19,14.76,204
+chlamydia,1,persistence,5.96,9.55,204
+chlamydia,1,trend,7.6,12.38,204
+chlamydia,2,fractional,17.03,18.39,203
+chlamydia,2,integer,17.37,18.61,203
+chlamydia,2,persistence,8.88,10.98,203
+chlamydia,2,trend,10.42,13.68,203
+ps_syphilis,1,fractional,21.43,31.33,204
+ps_syphilis,1,integer,21.62,31.59,204
+ps_syphilis,1,persistence,16.96,22.22,204
+ps_syphilis,1,trend,19.73,25.61,204
+ps_syphilis,2,fractional,33.15,49.53,203
+ps_syphilis,2,integer,33.24,50.05,203
+ps_syphilis,2,persistence,30.1,35.92,203
+ps_syphilis,2,trend,32.47,42.28,203

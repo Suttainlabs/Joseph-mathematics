@@ -1,0 +1,1221 @@
+state,year,disease,cases,population,rate_per_100k,source_table
+Alabama,2013,chlamydia,29464,4831586,609.82,qz8t-eu2e
+Alaska,2013,chlamydia,5774,737626,782.78,qz8t-eu2e
+Arizona,2013,chlamydia,30564,6634690,460.67,qz8t-eu2e
+Arkansas,2013,chlamydia,15447,2960459,521.78,qz8t-eu2e
+California,2013,chlamydia,167346,38253768,437.46,qz8t-eu2e
+Colorado,2013,chlamydia,20386,5270774,386.77,qz8t-eu2e
+Connecticut,2013,chlamydia,12775,3595792,355.28,qz8t-eu2e
+Delaware,2013,chlamydia,5213,924062,564.14,qz8t-eu2e
+Florida,2013,chlamydia,80182,19551678,410.1,qz8t-eu2e
+Georgia,2013,chlamydia,51070,9975592,511.95,qz8t-eu2e
+Hawaii,2013,chlamydia,6640,1408822,471.32,qz8t-eu2e
+Idaho,2013,chlamydia,5428,1612053,336.71,qz8t-eu2e
+Illinois,2013,chlamydia,63797,12895778,494.71,qz8t-eu2e
+Indiana,2013,chlamydia,28023,6570575,426.49,qz8t-eu2e
+Iowa,2013,chlamydia,10953,3093935,354.02,qz8t-eu2e
+Kansas,2013,chlamydia,11012,2894306,380.47,qz8t-eu2e
+Kentucky,2013,chlamydia,17134,4406906,388.8,qz8t-eu2e
+Louisiana,2013,chlamydia,28739,4626040,621.24,qz8t-eu2e
+Maine,2013,chlamydia,3438,1328543,258.78,qz8t-eu2e
+Maryland,2013,chlamydia,26723,5925197,451.01,qz8t-eu2e
+Massachusetts,2013,chlamydia,23210,6715158,345.64,qz8t-eu2e
+Michigan,2013,chlamydia,44835,9914802,452.2,qz8t-eu2e
+Minnesota,2013,chlamydia,18742,5414722,346.13,qz8t-eu2e
+Mississippi,2013,chlamydia,17464,2989839,584.11,qz8t-eu2e
+Missouri,2013,chlamydia,27328,6042989,452.23,qz8t-eu2e
+Montana,2013,chlamydia,3818,1014158,376.47,qz8t-eu2e
+Nebraska,2013,chlamydia,7301,1865813,391.3,qz8t-eu2e
+Nevada,2013,chlamydia,11781,2776956,424.24,qz8t-eu2e
+New Hampshire,2013,chlamydia,3119,1327272,234.99,qz8t-eu2e
+New Jersey,2013,chlamydia,28327,8857821,319.8,qz8t-eu2e
+New Mexico,2013,chlamydia,12249,2092833,585.28,qz8t-eu2e
+New York,2013,chlamydia,95803,19626488,488.13,qz8t-eu2e
+North Carolina,2013,chlamydia,48416,9846717,491.7,qz8t-eu2e
+North Dakota,2013,chlamydia,2932,723149,405.45,qz8t-eu2e
+Ohio,2013,chlamydia,53121,11579692,458.74,qz8t-eu2e
+Oklahoma,2013,chlamydia,18278,3853891,474.27,qz8t-eu2e
+Oregon,2013,chlamydia,14181,3924110,361.38,qz8t-eu2e
+Pennsylvania,2013,chlamydia,52056,12779538,407.34,qz8t-eu2e
+Rhode Island,2013,chlamydia,4312,1055560,408.5,qz8t-eu2e
+South Carolina,2013,chlamydia,25594,4766469,536.96,qz8t-eu2e
+South Dakota,2013,chlamydia,3927,842751,465.97,qz8t-eu2e
+Tennessee,2013,chlamydia,30370,6496943,467.45,qz8t-eu2e
+Texas,2013,chlamydia,129861,26479646,490.42,qz8t-eu2e
+Utah,2013,chlamydia,7535,2898773,259.94,qz8t-eu2e
+Vermont,2013,chlamydia,1842,626603,293.97,qz8t-eu2e
+Virginia,2013,chlamydia,33316,8255861,403.54,qz8t-eu2e
+Washington,2013,chlamydia,24950,6966252,358.16,qz8t-eu2e
+West Virginia,2013,chlamydia,5139,1854768,277.07,qz8t-eu2e
+Wisconsin,2013,chlamydia,23572,5738012,410.8,qz8t-eu2e
+Wyoming,2013,chlamydia,2005,582620,344.14,qz8t-eu2e
+Alabama,2014,chlamydia,28503,4843737,588.45,97tt-n3j3
+Alaska,2014,chlamydia,5698,737075,773.06,97tt-n3j3
+Arizona,2014,chlamydia,31843,6732873,472.95,97tt-n3j3
+Arkansas,2014,chlamydia,15452,2968759,520.49,97tt-n3j3
+California,2014,chlamydia,173980,38586706,450.88,97tt-n3j3
+Colorado,2014,chlamydia,21429,5352637,400.34,97tt-n3j3
+Connecticut,2014,chlamydia,13040,3595697,362.66,97tt-n3j3
+Delaware,2014,chlamydia,4381,933131,469.49,97tt-n3j3
+District of Columbia,2014,chlamydia,5266,663603,793.55,97tt-n3j3
+Florida,2014,chlamydia,82477,19853880,415.42,97tt-n3j3
+Georgia,2014,chlamydia,51502,10071204,511.38,97tt-n3j3
+Hawaii,2014,chlamydia,6338,1415335,447.81,97tt-n3j3
+Idaho,2014,chlamydia,5360,1632248,328.38,97tt-n3j3
+Illinois,2014,chlamydia,65749,12885092,510.27,97tt-n3j3
+Indiana,2014,chlamydia,28302,6596019,429.08,97tt-n3j3
+Iowa,2014,chlamydia,11659,3110643,374.81,97tt-n3j3
+Kansas,2014,chlamydia,10961,2901861,377.72,97tt-n3j3
+Kentucky,2014,chlamydia,17512,4416992,396.47,97tt-n3j3
+Louisiana,2014,chlamydia,27046,4645938,582.14,97tt-n3j3
+Maine,2014,chlamydia,3420,1331217,256.91,97tt-n3j3
+Maryland,2014,chlamydia,26721,5960064,448.33,97tt-n3j3
+Massachusetts,2014,chlamydia,20955,6764864,309.76,97tt-n3j3
+Michigan,2014,chlamydia,43558,9932033,438.56,97tt-n3j3
+Minnesota,2014,chlamydia,19632,5452665,360.04,97tt-n3j3
+Mississippi,2014,chlamydia,19359,2991892,647.05,97tt-n3j3
+Missouri,2014,chlamydia,27608,6059130,455.64,97tt-n3j3
+Montana,2014,chlamydia,4153,1022657,406.1,97tt-n3j3
+Nebraska,2014,chlamydia,7486,1879955,398.2,97tt-n3j3
+Nevada,2014,chlamydia,11764,2818935,417.32,97tt-n3j3
+New Hampshire,2014,chlamydia,3547,1334257,265.84,97tt-n3j3
+New Jersey,2014,chlamydia,29528,8867277,333.0,97tt-n3j3
+New Mexico,2014,chlamydia,11381,2090236,544.48,97tt-n3j3
+New York,2014,chlamydia,96867,19653431,492.88,97tt-n3j3
+North Carolina,2014,chlamydia,46268,9937295,465.6,97tt-n3j3
+North Dakota,2014,chlamydia,3400,738736,460.25,97tt-n3j3
+Ohio,2014,chlamydia,54160,11606573,466.63,97tt-n3j3
+Oklahoma,2014,chlamydia,20476,3879187,527.84,97tt-n3j3
+Oregon,2014,chlamydia,15335,3965447,386.72,97tt-n3j3
+Pennsylvania,2014,chlamydia,49929,12792392,390.3,97tt-n3j3
+Rhode Island,2014,chlamydia,4301,1056511,407.09,97tt-n3j3
+South Carolina,2014,chlamydia,27486,4826858,569.44,97tt-n3j3
+South Dakota,2014,chlamydia,4113,849670,484.07,97tt-n3j3
+Tennessee,2014,chlamydia,30793,6544617,470.51,97tt-n3j3
+Texas,2014,chlamydia,129685,26963092,480.97,97tt-n3j3
+Utah,2014,chlamydia,8131,2938327,276.72,97tt-n3j3
+Vermont,2014,chlamydia,2205,625693,352.41,97tt-n3j3
+Virginia,2014,chlamydia,35696,8315430,429.27,97tt-n3j3
+Washington,2014,chlamydia,26116,7057531,370.04,97tt-n3j3
+West Virginia,2014,chlamydia,4719,1850569,255.0,97tt-n3j3
+Wisconsin,2014,chlamydia,22910,5753199,398.21,97tt-n3j3
+Wyoming,2014,chlamydia,1937,583159,332.16,97tt-n3j3
+Alabama,2015,chlamydia,26359,4854803,542.95,n835-hpyp
+Alaska,2015,chlamydia,5660,738430,766.49,n835-hpyp
+Arizona,2015,chlamydia,32387,6832810,473.99,n835-hpyp
+Arkansas,2015,chlamydia,16166,2979732,542.53,n835-hpyp
+California,2015,chlamydia,189170,38904296,486.24,n835-hpyp
+Colorado,2015,chlamydia,23857,5454328,437.4,n835-hpyp
+Connecticut,2015,chlamydia,13126,3588561,365.77,n835-hpyp
+Delaware,2015,chlamydia,4605,942065,488.82,n835-hpyp
+District of Columbia,2015,chlamydia,7894,677014,1166.0,n835-hpyp
+Florida,2015,chlamydia,90468,20219111,447.44,n835-hpyp
+Georgia,2015,chlamydia,57639,10183353,566.01,n835-hpyp
+Hawaii,2015,chlamydia,7074,1422999,497.12,n835-hpyp
+Idaho,2015,chlamydia,5631,1652495,340.76,n835-hpyp
+Illinois,2015,chlamydia,69610,12859585,541.31,n835-hpyp
+Indiana,2015,chlamydia,28886,6611442,436.91,n835-hpyp
+Iowa,2015,chlamydia,12085,3122541,387.02,n835-hpyp
+Kansas,2015,chlamydia,11464,2910717,393.85,n835-hpyp
+Kentucky,2015,chlamydia,17444,4429126,393.85,n835-hpyp
+Louisiana,2015,chlamydia,32325,4666998,692.63,n835-hpyp
+Maine,2015,chlamydia,3965,1329098,298.32,n835-hpyp
+Maryland,2015,chlamydia,27450,5988528,458.38,n835-hpyp
+Massachusetts,2015,chlamydia,24100,6797484,354.54,n835-hpyp
+Michigan,2015,chlamydia,46486,9934483,467.93,n835-hpyp
+Minnesota,2015,chlamydia,21243,5484002,387.36,n835-hpyp
+Mississippi,2015,chlamydia,17371,2990231,580.93,n835-hpyp
+Missouri,2015,chlamydia,28948,6075411,476.48,n835-hpyp
+Montana,2015,chlamydia,4184,1031495,405.62,n835-hpyp
+Nebraska,2015,chlamydia,7956,1892059,420.49,n835-hpyp
+Nevada,2015,chlamydia,12925,2868531,450.58,n835-hpyp
+New Hampshire,2015,chlamydia,3095,1337480,231.41,n835-hpyp
+New Jersey,2015,chlamydia,31337,8870312,353.28,n835-hpyp
+New Mexico,2015,chlamydia,12632,2090071,604.38,n835-hpyp
+New York,2015,chlamydia,103615,19657321,527.11,n835-hpyp
+North Carolina,2015,chlamydia,64376,10037218,641.37,n835-hpyp
+North Dakota,2015,chlamydia,3159,755537,418.11,n835-hpyp
+Ohio,2015,chlamydia,56726,11622315,488.08,n835-hpyp
+Oklahoma,2015,chlamydia,21025,3910518,537.65,n835-hpyp
+Oregon,2015,chlamydia,16305,4018542,405.74,n835-hpyp
+Pennsylvania,2015,chlamydia,53460,12789838,417.99,n835-hpyp
+Rhode Island,2015,chlamydia,4575,1056886,432.88,n835-hpyp
+South Carolina,2015,chlamydia,27538,4896006,562.46,n835-hpyp
+South Dakota,2015,chlamydia,3949,854663,462.05,n835-hpyp
+Tennessee,2015,chlamydia,31272,6595354,474.15,n835-hpyp
+Texas,2015,chlamydia,141158,27468531,513.89,n835-hpyp
+Utah,2015,chlamydia,8633,2983626,289.35,n835-hpyp
+Vermont,2015,chlamydia,1901,625810,303.77,n835-hpyp
+Virginia,2015,chlamydia,35349,8367303,422.47,n835-hpyp
+Washington,2015,chlamydia,28699,7167287,400.42,n835-hpyp
+West Virginia,2015,chlamydia,4958,1843332,268.97,n835-hpyp
+Wisconsin,2015,chlamydia,24381,5762927,423.07,n835-hpyp
+Wyoming,2015,chlamydia,2037,586389,347.38,n835-hpyp
+Alabama,2016,chlamydia,26901,4866824,552.74,7mbm-jety
+Alaska,2016,chlamydia,5698,742575,767.33,7mbm-jety
+Arizona,2016,chlamydia,34923,6944767,502.87,7mbm-jety
+Arkansas,2016,chlamydia,16737,2991815,559.43,7mbm-jety
+California,2016,chlamydia,198155,39149186,506.15,7mbm-jety
+Colorado,2016,chlamydia,25569,5543844,461.21,7mbm-jety
+Connecticut,2016,chlamydia,13911,3579830,388.59,7mbm-jety
+Delaware,2016,chlamydia,5365,949989,564.74,7mbm-jety
+District of Columbia,2016,chlamydia,7283,687576,1059.23,7mbm-jety
+Florida,2016,chlamydia,94742,20627237,459.31,7mbm-jety
+Georgia,2016,chlamydia,62776,10308442,608.98,7mbm-jety
+Hawaii,2016,chlamydia,6902,1428885,483.03,7mbm-jety
+Idaho,2016,chlamydia,5897,1684036,350.17,7mbm-jety
+Illinois,2016,chlamydia,72201,12821709,563.12,7mbm-jety
+Indiana,2016,chlamydia,30847,6637898,464.71,7mbm-jety
+Iowa,2016,chlamydia,12983,3133210,414.37,7mbm-jety
+Kansas,2016,chlamydia,12160,2912977,417.44,7mbm-jety
+Kentucky,2016,chlamydia,18286,4440306,411.82,7mbm-jety
+Louisiana,2016,chlamydia,31727,4681346,677.73,7mbm-jety
+Maine,2016,chlamydia,4156,1332348,311.93,7mbm-jety
+Maryland,2016,chlamydia,30658,6007014,510.37,7mbm-jety
+Massachusetts,2016,chlamydia,26807,6827280,392.65,7mbm-jety
+Michigan,2016,chlamydia,45936,9954117,461.48,7mbm-jety
+Minnesota,2016,chlamydia,22685,5525360,410.56,7mbm-jety
+Mississippi,2016,chlamydia,20112,2990595,672.51,7mbm-jety
+Missouri,2016,chlamydia,30843,6091384,506.34,7mbm-jety
+Montana,2016,chlamydia,4416,1042137,423.74,7mbm-jety
+Nebraska,2016,chlamydia,8197,1906483,429.95,7mbm-jety
+Nevada,2016,chlamydia,14649,2919555,501.75,7mbm-jety
+New Hampshire,2016,chlamydia,3467,1343694,258.02,7mbm-jety
+New Jersey,2016,chlamydia,34519,8873584,389.01,7mbm-jety
+New Mexico,2016,chlamydia,13108,2092555,626.41,7mbm-jety
+New York,2016,chlamydia,109433,19636391,557.3,7mbm-jety
+North Carolina,2016,chlamydia,58006,10161802,570.82,7mbm-jety
+North Dakota,2016,chlamydia,3455,756114,456.94,7mbm-jety
+Ohio,2016,chlamydia,60496,11640060,519.72,7mbm-jety
+Oklahoma,2016,chlamydia,21449,3928143,546.03,7mbm-jety
+Oregon,2016,chlamydia,17425,4093271,425.7,7mbm-jety
+Pennsylvania,2016,chlamydia,56930,12788468,445.17,7mbm-jety
+Rhode Island,2016,chlamydia,4936,1057816,466.62,7mbm-jety
+South Carolina,2016,chlamydia,28179,4963031,567.78,7mbm-jety
+South Dakota,2016,chlamydia,4331,863693,501.45,7mbm-jety
+Tennessee,2016,chlamydia,32304,6651277,485.68,7mbm-jety
+Texas,2016,chlamydia,142952,27914064,512.11,7mbm-jety
+Utah,2016,chlamydia,9457,3044241,310.65,7mbm-jety
+Vermont,2016,chlamydia,1690,624366,270.67,7mbm-jety
+Virginia,2016,chlamydia,39666,8417651,471.22,7mbm-jety
+Washington,2016,chlamydia,31254,7299961,428.14,7mbm-jety
+West Virginia,2016,chlamydia,4821,1832435,263.09,7mbm-jety
+Wisconsin,2016,chlamydia,26894,5775170,465.68,7mbm-jety
+Wyoming,2016,chlamydia,2060,585243,351.99,7mbm-jety
+Alabama,2017,chlamydia,29935,4877989,613.68,5egk-p6rd
+Alaska,2017,chlamydia,5934,740983,800.83,5egk-p6rd
+Arizona,2017,chlamydia,39598,7048088,561.83,5egk-p6rd
+Arkansas,2017,chlamydia,17320,3003855,576.59,5egk-p6rd
+California,2017,chlamydia,218785,39337785,556.17,5egk-p6rd
+Colorado,2017,chlamydia,26995,5617421,480.56,5egk-p6rd
+Connecticut,2017,chlamydia,17750,3575324,496.46,5egk-p6rd
+Delaware,2017,chlamydia,5392,957942,562.87,5egk-p6rd
+District of Columbia,2017,chlamydia,9107,697079,1306.45,5egk-p6rd
+Florida,2017,chlamydia,100018,20977089,476.8,5egk-p6rd
+Georgia,2017,chlamydia,65104,10417031,624.98,5egk-p6rd
+Hawaii,2017,chlamydia,6850,1425763,480.44,5egk-p6rd
+Idaho,2017,chlamydia,6200,1719745,360.52,5egk-p6rd
+Illinois,2017,chlamydia,75518,12779893,590.91,5egk-p6rd
+Indiana,2017,chlamydia,34278,6662068,514.52,5egk-p6rd
+Iowa,2017,chlamydia,13893,3143734,441.93,5egk-p6rd
+Kansas,2017,chlamydia,13554,2910892,465.63,5egk-p6rd
+Kentucky,2017,chlamydia,19320,4455590,433.61,5egk-p6rd
+Louisiana,2017,chlamydia,34756,4673673,743.65,5egk-p6rd
+Maine,2017,chlamydia,4555,1335743,341.01,5egk-p6rd
+Maryland,2017,chlamydia,33416,6028186,554.33,5egk-p6rd
+Massachusetts,2017,chlamydia,29315,6863560,427.11,5egk-p6rd
+Michigan,2017,chlamydia,50595,9976752,507.13,5egk-p6rd
+Minnesota,2017,chlamydia,23539,5569283,422.66,5egk-p6rd
+Mississippi,2017,chlamydia,21149,2990674,707.17,5egk-p6rd
+Missouri,2017,chlamydia,32683,6111382,534.79,5egk-p6rd
+Montana,2017,chlamydia,4560,1053862,432.69,5egk-p6rd
+Nebraska,2017,chlamydia,8595,1916998,448.36,5egk-p6rd
+Nevada,2017,chlamydia,16260,2972097,547.09,5egk-p6rd
+New Hampshire,2017,chlamydia,4412,1350395,326.72,5egk-p6rd
+New Jersey,2017,chlamydia,35239,8888147,396.47,5egk-p6rd
+New Mexico,2017,chlamydia,13560,2092844,647.92,5egk-p6rd
+New York,2017,chlamydia,116814,19593849,596.18,5egk-p6rd
+North Carolina,2017,chlamydia,62876,10275758,611.89,5egk-p6rd
+North Dakota,2017,chlamydia,3278,756755,433.17,5egk-p6rd
+Ohio,2017,chlamydia,61389,11665706,526.23,5egk-p6rd
+Oklahoma,2017,chlamydia,21752,3933602,552.98,5egk-p6rd
+Oregon,2017,chlamydia,18634,4147294,449.31,5egk-p6rd
+Pennsylvania,2017,chlamydia,56447,12794679,441.18,5egk-p6rd
+Rhode Island,2017,chlamydia,5282,1056554,499.93,5egk-p6rd
+South Carolina,2017,chlamydia,32235,5027102,641.22,5egk-p6rd
+South Dakota,2017,chlamydia,4437,873732,507.82,5egk-p6rd
+Tennessee,2017,chlamydia,35087,6714748,522.54,5egk-p6rd
+Texas,2017,chlamydia,151533,28291024,535.62,5egk-p6rd
+Utah,2017,chlamydia,10135,3103540,326.56,5egk-p6rd
+Vermont,2017,chlamydia,1858,625132,297.22,5egk-p6rd
+Virginia,2017,chlamydia,42374,8471011,500.22,5egk-p6rd
+Washington,2017,chlamydia,32231,7427951,433.92,5egk-p6rd
+West Virginia,2017,chlamydia,4140,1818683,227.64,5egk-p6rd
+Wisconsin,2017,chlamydia,27740,5793147,478.84,5egk-p6rd
+Wyoming,2017,chlamydia,2142,579994,369.31,5egk-p6rd
+Alabama,2018,chlamydia,28437,4891628,581.34,kx9y-asbg
+Alaska,2018,chlamydia,6159,736624,836.11,kx9y-asbg
+Arizona,2018,chlamydia,40807,7164228,569.59,kx9y-asbg
+Arkansas,2018,chlamydia,17663,3012161,586.39,kx9y-asbg
+California,2018,chlamydia,231415,39437463,586.79,kx9y-asbg
+Colorado,2018,chlamydia,29124,5697155,511.2,kx9y-asbg
+Connecticut,2018,chlamydia,14918,3574561,417.34,kx9y-asbg
+Delaware,2018,chlamydia,6038,966985,624.42,kx9y-asbg
+District of Columbia,2018,chlamydia,9014,704147,1280.13,kx9y-asbg
+Florida,2018,chlamydia,104758,21254926,492.86,kx9y-asbg
+Georgia,2018,chlamydia,65936,10519389,626.8,kx9y-asbg
+Hawaii,2018,chlamydia,7735,1423102,543.53,kx9y-asbg
+Idaho,2018,chlamydia,6573,1752074,375.16,kx9y-asbg
+Illinois,2018,chlamydia,77325,12724685,607.68,kx9y-asbg
+Indiana,2018,chlamydia,34926,6698481,521.4,kx9y-asbg
+Iowa,2018,chlamydia,14682,3149900,466.11,kx9y-asbg
+Kansas,2018,chlamydia,14231,2912748,488.58,kx9y-asbg
+Kentucky,2018,chlamydia,19440,4464273,435.46,kx9y-asbg
+Louisiana,2018,chlamydia,36293,4664450,778.08,kx9y-asbg
+Maine,2018,chlamydia,4345,1340123,324.22,kx9y-asbg
+Maryland,2018,chlamydia,35482,6042153,587.24,kx9y-asbg
+Massachusetts,2018,chlamydia,30460,6885720,442.36,kx9y-asbg
+Michigan,2018,chlamydia,50592,9987286,506.56,kx9y-asbg
+Minnesota,2018,chlamydia,23569,5608762,420.22,kx9y-asbg
+Mississippi,2018,chlamydia,22086,2982879,740.43,kx9y-asbg
+Missouri,2018,chlamydia,34728,6125986,566.9,kx9y-asbg
+Montana,2018,chlamydia,4917,1061818,463.07,kx9y-asbg
+Nebraska,2018,chlamydia,8026,1925512,416.82,kx9y-asbg
+Nevada,2018,chlamydia,17508,3030725,577.68,kx9y-asbg
+New Hampshire,2018,chlamydia,3734,1355064,275.56,kx9y-asbg
+New Jersey,2018,chlamydia,36514,8891730,410.65,kx9y-asbg
+New Mexico,2018,chlamydia,14000,2093754,668.66,kx9y-asbg
+New York,2018,chlamydia,119571,19544098,611.8,kx9y-asbg
+North Carolina,2018,chlamydia,66553,10391358,640.46,kx9y-asbg
+North Dakota,2018,chlamydia,3525,760062,463.78,kx9y-asbg
+Ohio,2018,chlamydia,63220,11680892,541.23,kx9y-asbg
+Oklahoma,2018,chlamydia,21974,3943488,557.22,kx9y-asbg
+Oregon,2018,chlamydia,19224,4183538,459.52,kx9y-asbg
+Pennsylvania,2018,chlamydia,59340,12809107,463.26,kx9y-asbg
+Rhode Island,2018,chlamydia,5487,1059338,517.96,kx9y-asbg
+South Carolina,2018,chlamydia,33910,5091702,665.99,kx9y-asbg
+South Dakota,2018,chlamydia,4432,879386,503.99,kx9y-asbg
+Tennessee,2018,chlamydia,38212,6778180,563.75,kx9y-asbg
+Texas,2018,chlamydia,146510,28624564,511.83,kx9y-asbg
+Utah,2018,chlamydia,10541,3155153,334.09,kx9y-asbg
+Vermont,2018,chlamydia,1712,624802,274.01,kx9y-asbg
+Virginia,2018,chlamydia,42965,8510920,504.82,kx9y-asbg
+Washington,2018,chlamydia,34449,7526793,457.68,kx9y-asbg
+West Virginia,2018,chlamydia,3599,1805953,199.29,kx9y-asbg
+Wisconsin,2018,chlamydia,28027,5809319,482.45,kx9y-asbg
+Wyoming,2018,chlamydia,2169,579054,374.58,kx9y-asbg
+Alabama,2019,chlamydia,31228,4907965,636.27,cds4-6y7t
+Alaska,2019,chlamydia,6254,733603,852.5,cds4-6y7t
+Arizona,2019,chlamydia,43058,7291843,590.5,cds4-6y7t
+Arkansas,2019,chlamydia,17196,3020985,569.22,cds4-6y7t
+California,2019,chlamydia,236719,39437610,600.24,cds4-6y7t
+Colorado,2019,chlamydia,29821,5758486,517.86,cds4-6y7t
+Connecticut,2019,chlamydia,15458,3566022,433.48,cds4-6y7t
+Delaware,2019,chlamydia,5864,976668,600.41,cds4-6y7t
+District of Columbia,2019,chlamydia,9327,708253,1316.9,cds4-6y7t
+Florida,2019,chlamydia,110794,21492056,515.51,cds4-6y7t
+Georgia,2019,chlamydia,67720,10628020,637.18,cds4-6y7t
+Hawaii,2019,chlamydia,8093,1415615,571.69,cds4-6y7t
+Idaho,2019,chlamydia,6862,1789060,383.55,cds4-6y7t
+Illinois,2019,chlamydia,81012,12667017,639.55,cds4-6y7t
+Indiana,2019,chlamydia,35430,6731010,526.37,cds4-6y7t
+Iowa,2019,chlamydia,16044,3159596,507.79,cds4-6y7t
+Kansas,2019,chlamydia,15286,2912635,524.82,cds4-6y7t
+Kentucky,2019,chlamydia,20911,4472345,467.56,cds4-6y7t
+Louisiana,2019,chlamydia,36131,4658285,775.63,cds4-6y7t
+Maine,2019,chlamydia,3989,1345770,296.41,cds4-6y7t
+Maryland,2019,chlamydia,37779,6054954,623.94,cds4-6y7t
+Massachusetts,2019,chlamydia,31622,6894883,458.63,cds4-6y7t
+Michigan,2019,chlamydia,49968,9984795,500.44,cds4-6y7t
+Minnesota,2019,chlamydia,24470,5640053,433.86,cds4-6y7t
+Mississippi,2019,chlamydia,25303,2978227,849.6,cds4-6y7t
+Missouri,2019,chlamydia,34416,6140475,560.48,cds4-6y7t
+Montana,2019,chlamydia,4753,1070123,444.15,cds4-6y7t
+Nebraska,2019,chlamydia,9291,1932571,480.76,cds4-6y7t
+Nevada,2019,chlamydia,17827,3090771,576.78,cds4-6y7t
+New Hampshire,2019,chlamydia,3577,1360783,262.86,cds4-6y7t
+New Jersey,2019,chlamydia,37591,8891258,422.79,cds4-6y7t
+New Mexico,2019,chlamydia,14283,2099634,680.26,cds4-6y7t
+New York,2019,chlamydia,124622,19463131,640.3,cds4-6y7t
+North Carolina,2019,chlamydia,71164,10501384,677.66,cds4-6y7t
+North Dakota,2019,chlamydia,3880,763724,508.04,cds4-6y7t
+Ohio,2019,chlamydia,65393,11696507,559.08,cds4-6y7t
+Oklahoma,2019,chlamydia,23518,3960676,593.79,cds4-6y7t
+Oregon,2019,chlamydia,19279,4216116,457.27,cds4-6y7t
+Pennsylvania,2019,chlamydia,61694,12798883,482.03,cds4-6y7t
+Rhode Island,2019,chlamydia,5718,1058158,540.37,cds4-6y7t
+South Carolina,2019,chlamydia,35950,5157702,697.02,cds4-6y7t
+South Dakota,2019,chlamydia,4547,887127,512.55,cds4-6y7t
+Tennessee,2019,chlamydia,41089,6830325,601.57,cds4-6y7t
+Texas,2019,chlamydia,129075,28986794,445.29,cds4-6y7t
+Utah,2019,chlamydia,11075,3203383,345.73,cds4-6y7t
+Vermont,2019,chlamydia,1718,624046,275.3,cds4-6y7t
+Virginia,2019,chlamydia,48169,8556642,562.94,cds4-6y7t
+Washington,2019,chlamydia,37795,7614024,496.39,cds4-6y7t
+West Virginia,2019,chlamydia,5609,1795263,312.43,cds4-6y7t
+Wisconsin,2019,chlamydia,29080,5824581,499.26,cds4-6y7t
+Wyoming,2019,chlamydia,2189,580116,377.34,cds4-6y7t
+Alabama,2020,chlamydia,26697,5032962,530.44,hwyy-s2tt
+Alaska,2020,chlamydia,5015,732906,684.26,hwyy-s2tt
+Arizona,2020,chlamydia,36770,7186647,511.64,hwyy-s2tt
+Arkansas,2020,chlamydia,15863,3014399,526.24,hwyy-s2tt
+California,2020,chlamydia,176481,39527808,446.47,hwyy-s2tt
+Colorado,2020,chlamydia,25712,5786873,444.32,hwyy-s2tt
+Connecticut,2020,chlamydia,12714,3579643,355.18,hwyy-s2tt
+Delaware,2020,chlamydia,4721,991890,475.96,hwyy-s2tt
+District of Columbia,2020,chlamydia,3094,670958,461.13,hwyy-s2tt
+Florida,2020,chlamydia,98013,21591325,453.95,hwyy-s2tt
+Georgia,2020,chlamydia,61681,10732595,574.71,hwyy-s2tt
+Hawaii,2020,chlamydia,6902,1451130,475.63,hwyy-s2tt
+Idaho,2020,chlamydia,6153,1849328,332.72,hwyy-s2tt
+Illinois,2020,chlamydia,67666,12795348,528.83,hwyy-s2tt
+Indiana,2020,chlamydia,32784,6790290,482.81,hwyy-s2tt
+Iowa,2020,chlamydia,14872,3191081,466.05,hwyy-s2tt
+Kansas,2020,chlamydia,14406,2938274,490.29,hwyy-s2tt
+Kentucky,2020,chlamydia,16166,4508271,358.59,hwyy-s2tt
+Louisiana,2020,chlamydia,32486,4652145,698.3,hwyy-s2tt
+Maine,2020,chlamydia,3384,1364546,247.99,hwyy-s2tt
+Maryland,2020,chlamydia,31945,6178387,517.04,hwyy-s2tt
+Massachusetts,2020,chlamydia,24555,6985320,351.52,hwyy-s2tt
+Michigan,2020,chlamydia,43894,10072294,435.79,hwyy-s2tt
+Minnesota,2020,chlamydia,21757,5710562,381.0,hwyy-s2tt
+Mississippi,2020,chlamydia,23610,2958385,798.07,hwyy-s2tt
+Missouri,2020,chlamydia,30567,6155074,496.61,hwyy-s2tt
+Montana,2020,chlamydia,4070,1087156,374.37,hwyy-s2tt
+Nebraska,2020,chlamydia,8844,1963318,450.46,hwyy-s2tt
+Nevada,2020,chlamydia,14555,3116851,466.98,hwyy-s2tt
+New Hampshire,2020,chlamydia,2885,1378752,209.25,hwyy-s2tt
+New Jersey,2020,chlamydia,31213,9270476,336.69,hwyy-s2tt
+New Mexico,2020,chlamydia,11921,2118446,562.72,hwyy-s2tt
+New York,2020,chlamydia,96902,20122262,481.57,hwyy-s2tt
+North Carolina,2020,chlamydia,63812,10450215,610.63,hwyy-s2tt
+North Dakota,2020,chlamydia,3513,779612,450.61,hwyy-s2tt
+Ohio,2020,chlamydia,58611,11798534,496.77,hwyy-s2tt
+Oklahoma,2020,chlamydia,20940,3965243,528.09,hwyy-s2tt
+Oregon,2020,chlamydia,15607,4243544,367.78,hwyy-s2tt
+Pennsylvania,2020,chlamydia,51589,12995576,396.97,hwyy-s2tt
+Rhode Island,2020,chlamydia,4249,1096487,387.51,hwyy-s2tt
+South Carolina,2020,chlamydia,33614,5131992,654.99,hwyy-s2tt
+South Dakota,2020,chlamydia,3981,887808,448.41,hwyy-s2tt
+Tennessee,2020,chlamydia,37437,6927736,540.39,hwyy-s2tt
+Texas,2020,chlamydia,133326,29237895,456.0,hwyy-s2tt
+Utah,2020,chlamydia,10296,3283970,313.52,hwyy-s2tt
+Vermont,2020,chlamydia,1098,642965,170.77,hwyy-s2tt
+Virginia,2020,chlamydia,40383,8637303,467.54,hwyy-s2tt
+Washington,2020,chlamydia,30933,7726812,400.33,hwyy-s2tt
+West Virginia,2020,chlamydia,5372,1791670,299.83,hwyy-s2tt
+Wisconsin,2020,chlamydia,26147,5897371,443.37,hwyy-s2tt
+Wyoming,2020,chlamydia,1922,577669,332.72,hwyy-s2tt
+Alabama,2021,chlamydia,31500,5050058,623.76,x9gk-5huc
+Alaska,2021,chlamydia,5571,734590,758.38,x9gk-5huc
+Arizona,2021,chlamydia,41498,7274022,570.5,x9gk-5huc
+Arkansas,2021,chlamydia,17936,3027127,592.51,x9gk-5huc
+California,2021,chlamydia,191542,39152927,489.22,x9gk-5huc
+Colorado,2021,chlamydia,26747,5814368,460.02,x9gk-5huc
+Connecticut,2021,chlamydia,14750,3607765,408.84,x9gk-5huc
+Delaware,2021,chlamydia,4880,1005130,485.51,x9gk-5huc
+District of Columbia,2021,chlamydia,6952,669637,1038.17,x9gk-5huc
+Florida,2021,chlamydia,104400,21836698,478.09,x9gk-5huc
+Georgia,2021,chlamydia,67941,10793038,629.49,x9gk-5huc
+Hawaii,2021,chlamydia,6078,1446909,420.07,x9gk-5huc
+Idaho,2021,chlamydia,6318,1904855,331.68,x9gk-5huc
+Illinois,2021,chlamydia,71836,12703354,565.49,x9gk-5huc
+Indiana,2021,chlamydia,34755,6814223,510.04,x9gk-5huc
+Iowa,2021,chlamydia,15620,3199037,488.27,x9gk-5huc
+Kansas,2021,chlamydia,14851,2938966,505.31,x9gk-5huc
+Kentucky,2021,chlamydia,18392,4508348,407.95,x9gk-5huc
+Louisiana,2021,chlamydia,33759,4628595,729.36,x9gk-5huc
+Maine,2021,chlamydia,3372,1379009,244.52,x9gk-5huc
+Maryland,2021,chlamydia,30452,6176035,493.07,x9gk-5huc
+Massachusetts,2021,chlamydia,26950,6996721,385.18,x9gk-5huc
+Michigan,2021,chlamydia,45474,10042362,452.82,x9gk-5huc
+Minnesota,2021,chlamydia,22573,5714055,395.04,x9gk-5huc
+Mississippi,2021,chlamydia,22126,2947603,750.64,x9gk-5huc
+Missouri,2021,chlamydia,31915,6172551,517.05,x9gk-5huc
+Montana,2021,chlamydia,4029,1106416,364.15,x9gk-5huc
+Nebraska,2021,chlamydia,8897,1964697,452.84,x9gk-5huc
+Nevada,2021,chlamydia,16348,3148472,519.24,x9gk-5huc
+New Hampshire,2021,chlamydia,3027,1387907,218.1,x9gk-5huc
+New Jersey,2021,chlamydia,33425,9266509,360.71,x9gk-5huc
+New Mexico,2021,chlamydia,12441,2117300,587.59,x9gk-5huc
+New York,2021,chlamydia,101657,19835345,512.5,x9gk-5huc
+North Carolina,2021,chlamydia,63659,10565503,602.52,x9gk-5huc
+North Dakota,2021,chlamydia,3964,777977,509.53,x9gk-5huc
+Ohio,2021,chlamydia,56520,11761443,480.55,x9gk-5huc
+Oklahoma,2021,chlamydia,20709,3992760,518.66,x9gk-5huc
+Oregon,2021,chlamydia,15596,4254691,366.56,x9gk-5huc
+Pennsylvania,2021,chlamydia,53124,13016628,408.12,x9gk-5huc
+Rhode Island,2021,chlamydia,5199,1097381,473.76,x9gk-5huc
+South Carolina,2021,chlamydia,36477,5194346,702.24,x9gk-5huc
+South Dakota,2021,chlamydia,4853,896303,541.45,x9gk-5huc
+Tennessee,2021,chlamydia,39227,6966687,563.07,x9gk-5huc
+Texas,2021,chlamydia,149636,29572672,505.99,x9gk-5huc
+Utah,2021,chlamydia,11221,3339874,335.97,x9gk-5huc
+Vermont,2021,chlamydia,910,647238,140.6,x9gk-5huc
+Virginia,2021,chlamydia,40409,8660007,466.62,x9gk-5huc
+Washington,2021,chlamydia,29632,7744316,382.63,x9gk-5huc
+West Virginia,2021,chlamydia,5226,1785921,292.62,x9gk-5huc
+Wisconsin,2021,chlamydia,27841,5882128,473.32,x9gk-5huc
+Wyoming,2021,chlamydia,2078,579662,358.48,x9gk-5huc
+Alabama,2022,chlamydia,31054,5076868,611.68,x9gk-5huc
+Alaska,2022,chlamydia,5338,733659,727.59,x9gk-5huc
+Arizona,2022,chlamydia,40796,7370065,553.54,x9gk-5huc
+Arkansas,2022,chlamydia,17918,3047429,587.97,x9gk-5huc
+California,2022,chlamydia,192647,39125347,492.38,x9gk-5huc
+Colorado,2022,chlamydia,26646,5853355,455.23,x9gk-5huc
+Connecticut,2022,chlamydia,12738,3618707,352.0,x9gk-5huc
+Delaware,2022,chlamydia,5177,1020279,507.41,x9gk-5huc
+District of Columbia,2022,chlamydia,8141,674501,1206.97,x9gk-5huc
+Florida,2022,chlamydia,106873,22413989,476.81,x9gk-5huc
+Georgia,2022,chlamydia,72662,10929992,664.79,x9gk-5huc
+Hawaii,2022,chlamydia,5530,1437812,384.61,x9gk-5huc
+Idaho,2022,chlamydia,5972,1942951,307.37,x9gk-5huc
+Illinois,2022,chlamydia,71564,12609577,567.54,x9gk-5huc
+Indiana,2022,chlamydia,33834,6841491,494.54,x9gk-5huc
+Iowa,2022,chlamydia,14634,3201890,457.04,x9gk-5huc
+Kansas,2022,chlamydia,13935,2938034,474.3,x9gk-5huc
+Kentucky,2022,chlamydia,18236,4521238,403.34,x9gk-5huc
+Louisiana,2022,chlamydia,36200,4600892,786.8,x9gk-5huc
+Maine,2022,chlamydia,3128,1391585,224.78,x9gk-5huc
+Maryland,2022,chlamydia,31234,6183257,505.14,x9gk-5huc
+Massachusetts,2022,chlamydia,28373,7025465,403.86,x9gk-5huc
+Michigan,2022,chlamydia,42977,10043906,427.89,x9gk-5huc
+Minnesota,2022,chlamydia,22072,5727565,385.36,x9gk-5huc
+Mississippi,2022,chlamydia,22968,2941237,780.9,x9gk-5huc
+Missouri,2022,chlamydia,32346,6179285,523.46,x9gk-5huc
+Montana,2022,chlamydia,4089,1121533,364.59,x9gk-5huc
+Nebraska,2022,chlamydia,9627,1972595,488.04,x9gk-5huc
+Nevada,2022,chlamydia,16189,3177672,509.46,x9gk-5huc
+New Hampshire,2022,chlamydia,2830,1396647,202.63,x9gk-5huc
+New Jersey,2022,chlamydia,33147,9298402,356.48,x9gk-5huc
+New Mexico,2022,chlamydia,11172,2112859,528.76,x9gk-5huc
+New York,2022,chlamydia,103673,19713025,525.91,x9gk-5huc
+North Carolina,2022,chlamydia,64525,10705768,602.71,x9gk-5huc
+North Dakota,2022,chlamydia,3704,780191,474.76,x9gk-5huc
+Ohio,2022,chlamydia,54459,11764950,462.89,x9gk-5huc
+Oklahoma,2022,chlamydia,20190,4025327,501.57,x9gk-5huc
+Oregon,2022,chlamydia,15504,4245964,365.15,x9gk-5huc
+Pennsylvania,2022,chlamydia,54645,12984655,420.84,x9gk-5huc
+Rhode Island,2022,chlamydia,5199,1098275,473.38,x9gk-5huc
+South Carolina,2022,chlamydia,35525,5288957,671.68,x9gk-5huc
+South Dakota,2022,chlamydia,5160,909156,567.56,x9gk-5huc
+Tennessee,2022,chlamydia,37942,7063325,537.17,x9gk-5huc
+Texas,2022,chlamydia,155483,30118002,516.25,x9gk-5huc
+Utah,2022,chlamydia,11108,3393928,327.29,x9gk-5huc
+Vermont,2022,chlamydia,1281,647614,197.8,x9gk-5huc
+Virginia,2022,chlamydia,40789,8681038,469.86,x9gk-5huc
+Washington,2022,chlamydia,28431,7786828,365.12,x9gk-5huc
+West Virginia,2022,chlamydia,4450,1774003,250.85,x9gk-5huc
+Wisconsin,2022,chlamydia,25676,5903472,434.93,x9gk-5huc
+Wyoming,2022,chlamydia,1793,581742,308.21,x9gk-5huc
+Alabama,2023,chlamydia,33260,5117850,649.88,x9gk-5huc
+Alaska,2023,chlamydia,5117,734654,696.52,x9gk-5huc
+Arizona,2023,chlamydia,41058,7452073,550.96,x9gk-5huc
+Arkansas,2023,chlamydia,17781,3069856,579.21,x9gk-5huc
+California,2023,chlamydia,191292,39181667,488.22,x9gk-5huc
+Colorado,2023,chlamydia,25571,5912240,432.51,x9gk-5huc
+Connecticut,2023,chlamydia,13197,3641369,362.42,x9gk-5huc
+Delaware,2023,chlamydia,5703,1035354,550.83,x9gk-5huc
+District of Columbia,2023,chlamydia,8338,682559,1221.58,x9gk-5huc
+Florida,2023,chlamydia,112804,22929248,491.97,x9gk-5huc
+Georgia,2023,chlamydia,71294,11063669,644.4,x9gk-5huc
+Hawaii,2023,chlamydia,6251,1434950,435.62,x9gk-5huc
+Idaho,2023,chlamydia,5785,1970497,293.58,x9gk-5huc
+Illinois,2023,chlamydia,69992,12633389,554.02,x9gk-5huc
+Indiana,2023,chlamydia,33693,6881373,489.63,x9gk-5huc
+Iowa,2023,chlamydia,13687,3214739,425.76,x9gk-5huc
+Kansas,2023,chlamydia,13345,2949749,452.41,x9gk-5huc
+Kentucky,2023,chlamydia,17252,4549953,379.17,x9gk-5huc
+Louisiana,2023,chlamydia,36242,4598777,788.08,x9gk-5huc
+Maine,2023,chlamydia,3034,1401992,216.41,x9gk-5huc
+Maryland,2023,chlamydia,35836,6204927,577.54,x9gk-5huc
+Massachusetts,2023,chlamydia,28895,7073479,408.5,x9gk-5huc
+Michigan,2023,chlamydia,43115,10062124,428.49,x9gk-5huc
+Minnesota,2023,chlamydia,21777,5752998,378.53,x9gk-5huc
+Mississippi,2023,chlamydia,20603,2942470,700.19,x9gk-5huc
+Missouri,2023,chlamydia,30892,6205956,497.78,x9gk-5huc
+Montana,2023,chlamydia,3655,1130612,323.28,x9gk-5huc
+Nebraska,2023,chlamydia,9266,1988172,466.06,x9gk-5huc
+Nevada,2023,chlamydia,15766,3211077,490.99,x9gk-5huc
+New Hampshire,2023,chlamydia,2756,1401530,196.64,x9gk-5huc
+New Jersey,2023,chlamydia,35689,9395315,379.86,x9gk-5huc
+New Mexico,2023,chlamydia,11071,2119349,522.38,x9gk-5huc
+New York,2023,chlamydia,109284,19786543,552.31,x9gk-5huc
+North Carolina,2023,chlamydia,65867,10871849,605.85,x9gk-5huc
+North Dakota,2023,chlamydia,3421,787071,434.65,x9gk-5huc
+Ohio,2023,chlamydia,54411,11808390,460.78,x9gk-5huc
+Oklahoma,2023,chlamydia,19104,4062716,470.23,x9gk-5huc
+Oregon,2023,chlamydia,15344,4250392,361.0,x9gk-5huc
+Pennsylvania,2023,chlamydia,54600,13009406,419.7,x9gk-5huc
+Rhode Island,2023,chlamydia,5265,1101183,478.12,x9gk-5huc
+South Carolina,2023,chlamydia,32889,5390798,610.1,x9gk-5huc
+South Dakota,2023,chlamydia,4887,917739,532.5,x9gk-5huc
+Tennessee,2023,chlamydia,36872,7153029,515.47,x9gk-5huc
+Texas,2023,chlamydia,150056,30719247,488.48,x9gk-5huc
+Utah,2023,chlamydia,11003,3449259,319.0,x9gk-5huc
+Vermont,2023,chlamydia,1307,647722,201.78,x9gk-5huc
+Virginia,2023,chlamydia,41206,8732034,471.89,x9gk-5huc
+Washington,2023,chlamydia,27687,7838655,353.21,x9gk-5huc
+West Virginia,2023,chlamydia,4407,1770036,248.98,x9gk-5huc
+Wisconsin,2023,chlamydia,24988,5930350,421.36,x9gk-5huc
+Wyoming,2023,chlamydia,1829,584666,312.83,x9gk-5huc
+Alabama,2024,chlamydia,30925,5163055,598.97,x9gk-5huc
+Alaska,2024,chlamydia,4710,736537,639.48,x9gk-5huc
+Arizona,2024,chlamydia,37688,7556424,498.75,x9gk-5huc
+Arkansas,2024,chlamydia,16566,3096080,535.06,x9gk-5huc
+California,2024,chlamydia,170781,39364774,433.84,x9gk-5huc
+Colorado,2024,chlamydia,24534,5988502,409.69,x9gk-5huc
+Connecticut,2024,chlamydia,12150,3674449,330.66,x9gk-5huc
+Delaware,2024,chlamydia,5055,1050123,481.37,x9gk-5huc
+District of Columbia,2024,chlamydia,6891,691310,996.8,x9gk-5huc
+Florida,2024,chlamydia,106195,23265838,456.44,x9gk-5huc
+Georgia,2024,chlamydia,66884,11204208,596.95,x9gk-5huc
+Idaho,2024,chlamydia,5099,2000872,254.84,x9gk-5huc
+Illinois,2024,chlamydia,62841,12703033,494.69,x9gk-5huc
+Indiana,2024,chlamydia,31511,6934754,454.39,x9gk-5huc
+Iowa,2024,chlamydia,12066,3230454,373.51,x9gk-5huc
+Kansas,2024,chlamydia,12232,2965252,412.51,x9gk-5huc
+Kentucky,2024,chlamydia,16351,4584046,356.69,x9gk-5huc
+Louisiana,2024,chlamydia,35559,4614878,770.53,x9gk-5huc
+Maine,2024,chlamydia,2661,1408438,188.93,x9gk-5huc
+Maryland,2024,chlamydia,30744,6245314,492.27,x9gk-5huc
+Massachusetts,2024,chlamydia,26354,7138560,369.18,x9gk-5huc
+Michigan,2024,chlamydia,38097,10099962,377.2,x9gk-5huc
+Minnesota,2024,chlamydia,19603,5797405,338.13,x9gk-5huc
+Mississippi,2024,chlamydia,13815,2950172,468.28,x9gk-5huc
+Missouri,2024,chlamydia,28553,6243544,457.32,x9gk-5huc
+Montana,2024,chlamydia,3365,1137557,295.81,x9gk-5huc
+Nebraska,2024,chlamydia,8142,2005591,405.97,x9gk-5huc
+Nevada,2024,chlamydia,14971,3253543,460.14,x9gk-5huc
+New Hampshire,2024,chlamydia,2453,1408518,174.15,x9gk-5huc
+New Jersey,2024,chlamydia,34157,9506354,359.31,x9gk-5huc
+New Mexico,2024,chlamydia,9496,2126774,446.5,x9gk-5huc
+New York,2024,chlamydia,101561,20001419,507.77,x9gk-5huc
+North Carolina,2024,chlamydia,61256,11052061,554.25,x9gk-5huc
+North Dakota,2024,chlamydia,3013,793387,379.76,x9gk-5huc
+Ohio,2024,chlamydia,48766,11860621,411.16,x9gk-5huc
+Oklahoma,2024,chlamydia,18313,4097758,446.9,x9gk-5huc
+Oregon,2024,chlamydia,13910,4265324,326.12,x9gk-5huc
+Pennsylvania,2024,chlamydia,50980,13045848,390.78,x9gk-5huc
+Rhode Island,2024,chlamydia,4674,1110415,420.92,x9gk-5huc
+South Carolina,2024,chlamydia,33907,5490316,617.58,x9gk-5huc
+South Dakota,2024,chlamydia,4089,927110,441.05,x9gk-5huc
+Tennessee,2024,chlamydia,36830,7251291,507.91,x9gk-5huc
+Texas,2024,chlamydia,146039,31318578,466.3,x9gk-5huc
+Utah,2024,chlamydia,9891,3502983,282.36,x9gk-5huc
+Vermont,2024,chlamydia,1204,646521,186.23,x9gk-5huc
+Virginia,2024,chlamydia,37461,8819642,424.75,x9gk-5huc
+Washington,2024,chlamydia,25554,7927958,322.33,x9gk-5huc
+West Virginia,2024,chlamydia,4163,1767402,235.54,x9gk-5huc
+Wisconsin,2024,chlamydia,23303,5957168,391.18,x9gk-5huc
+Wyoming,2024,chlamydia,1492,586722,254.29,x9gk-5huc
+Alabama,2013,ps_syphilis,183,4831586,3.79,fqve-8wzt
+Alaska,2013,ps_syphilis,23,737626,3.12,fqve-8wzt
+Arizona,2013,ps_syphilis,287,6634690,4.33,fqve-8wzt
+Arkansas,2013,ps_syphilis,177,2960459,5.98,fqve-8wzt
+California,2013,ps_syphilis,3532,38253768,9.23,fqve-8wzt
+Colorado,2013,ps_syphilis,163,5270774,3.09,fqve-8wzt
+Connecticut,2013,ps_syphilis,56,3595792,1.56,fqve-8wzt
+Delaware,2013,ps_syphilis,52,924062,5.63,fqve-8wzt
+Florida,2013,ps_syphilis,1513,19551678,7.74,fqve-8wzt
+Georgia,2013,ps_syphilis,1017,9975592,10.19,fqve-8wzt
+Hawaii,2013,ps_syphilis,46,1408822,3.27,fqve-8wzt
+Idaho,2013,ps_syphilis,15,1612053,0.93,fqve-8wzt
+Illinois,2013,ps_syphilis,798,12895778,6.19,fqve-8wzt
+Indiana,2013,ps_syphilis,215,6570575,3.27,fqve-8wzt
+Iowa,2013,ps_syphilis,106,3093935,3.43,fqve-8wzt
+Kansas,2013,ps_syphilis,51,2894306,1.76,fqve-8wzt
+Kentucky,2013,ps_syphilis,122,4406906,2.77,fqve-8wzt
+Louisiana,2013,ps_syphilis,423,4626040,9.14,fqve-8wzt
+Maine,2013,ps_syphilis,10,1328543,0.75,fqve-8wzt
+Maryland,2013,ps_syphilis,456,5925197,7.7,fqve-8wzt
+Massachusetts,2013,ps_syphilis,360,6715158,5.36,fqve-8wzt
+Michigan,2013,ps_syphilis,487,9914802,4.91,fqve-8wzt
+Minnesota,2013,ps_syphilis,193,5414722,3.56,fqve-8wzt
+Mississippi,2013,ps_syphilis,78,2989839,2.61,fqve-8wzt
+Missouri,2013,ps_syphilis,251,6042989,4.15,fqve-8wzt
+Montana,2013,ps_syphilis,5,1014158,0.49,fqve-8wzt
+Nebraska,2013,ps_syphilis,41,1865813,2.2,fqve-8wzt
+Nevada,2013,ps_syphilis,205,2776956,7.38,fqve-8wzt
+New Hampshire,2013,ps_syphilis,28,1327272,2.11,fqve-8wzt
+New Jersey,2013,ps_syphilis,233,8857821,2.63,fqve-8wzt
+New Mexico,2013,ps_syphilis,78,2092833,3.73,fqve-8wzt
+New York,2013,ps_syphilis,1459,19626488,7.43,fqve-8wzt
+North Carolina,2013,ps_syphilis,404,9846717,4.1,fqve-8wzt
+North Dakota,2013,ps_syphilis,12,723149,1.66,fqve-8wzt
+Ohio,2013,ps_syphilis,436,11579692,3.77,fqve-8wzt
+Oklahoma,2013,ps_syphilis,118,3853891,3.06,fqve-8wzt
+Oregon,2013,ps_syphilis,267,3924110,6.8,fqve-8wzt
+Pennsylvania,2013,ps_syphilis,471,12779538,3.69,fqve-8wzt
+Rhode Island,2013,ps_syphilis,45,1055560,4.26,fqve-8wzt
+South Carolina,2013,ps_syphilis,271,4766469,5.69,fqve-8wzt
+South Dakota,2013,ps_syphilis,44,842751,5.22,fqve-8wzt
+Tennessee,2013,ps_syphilis,214,6496943,3.29,fqve-8wzt
+Texas,2013,ps_syphilis,1475,26479646,5.57,fqve-8wzt
+Utah,2013,ps_syphilis,74,2898773,2.55,fqve-8wzt
+Vermont,2013,ps_syphilis,3,626603,0.48,fqve-8wzt
+Virginia,2013,ps_syphilis,315,8255861,3.82,fqve-8wzt
+Washington,2013,ps_syphilis,284,6966252,4.08,fqve-8wzt
+West Virginia,2013,ps_syphilis,15,1854768,0.81,fqve-8wzt
+Wisconsin,2013,ps_syphilis,95,5738012,1.66,fqve-8wzt
+Wyoming,2013,ps_syphilis,1,582620,0.17,fqve-8wzt
+Alabama,2014,ps_syphilis,161,4843737,3.32,ekd3-qu3w
+Alaska,2014,ps_syphilis,15,737075,2.04,ekd3-qu3w
+Arizona,2014,ps_syphilis,565,6732873,8.39,ekd3-qu3w
+Arkansas,2014,ps_syphilis,120,2968759,4.04,ekd3-qu3w
+California,2014,ps_syphilis,3776,38586706,9.79,ekd3-qu3w
+Colorado,2014,ps_syphilis,185,5352637,3.46,ekd3-qu3w
+Connecticut,2014,ps_syphilis,86,3595697,2.39,ekd3-qu3w
+Delaware,2014,ps_syphilis,46,933131,4.93,ekd3-qu3w
+District of Columbia,2014,ps_syphilis,115,663603,17.33,ekd3-qu3w
+Florida,2014,ps_syphilis,1701,19853880,8.57,ekd3-qu3w
+Georgia,2014,ps_syphilis,1226,10071204,12.17,ekd3-qu3w
+Hawaii,2014,ps_syphilis,68,1415335,4.8,ekd3-qu3w
+Idaho,2014,ps_syphilis,11,1632248,0.67,ekd3-qu3w
+Illinois,2014,ps_syphilis,862,12885092,6.69,ekd3-qu3w
+Indiana,2014,ps_syphilis,166,6596019,2.52,ekd3-qu3w
+Iowa,2014,ps_syphilis,71,3110643,2.28,ekd3-qu3w
+Kansas,2014,ps_syphilis,60,2901861,2.07,ekd3-qu3w
+Kentucky,2014,ps_syphilis,157,4416992,3.55,ekd3-qu3w
+Louisiana,2014,ps_syphilis,545,4645938,11.73,ekd3-qu3w
+Maine,2014,ps_syphilis,16,1331217,1.2,ekd3-qu3w
+Maryland,2014,ps_syphilis,438,5960064,7.35,ekd3-qu3w
+Massachusetts,2014,ps_syphilis,295,6764864,4.36,ekd3-qu3w
+Michigan,2014,ps_syphilis,415,9932033,4.18,ekd3-qu3w
+Minnesota,2014,ps_syphilis,246,5452665,4.51,ekd3-qu3w
+Mississippi,2014,ps_syphilis,184,2991892,6.15,ekd3-qu3w
+Missouri,2014,ps_syphilis,346,6059130,5.71,ekd3-qu3w
+Montana,2014,ps_syphilis,8,1022657,0.78,ekd3-qu3w
+Nebraska,2014,ps_syphilis,50,1879955,2.66,ekd3-qu3w
+Nevada,2014,ps_syphilis,352,2818935,12.49,ekd3-qu3w
+New Hampshire,2014,ps_syphilis,34,1334257,2.55,ekd3-qu3w
+New Jersey,2014,ps_syphilis,295,8867277,3.33,ekd3-qu3w
+New Mexico,2014,ps_syphilis,125,2090236,5.98,ekd3-qu3w
+New York,2014,ps_syphilis,1677,19653431,8.53,ekd3-qu3w
+North Carolina,2014,ps_syphilis,711,9937295,7.15,ekd3-qu3w
+North Dakota,2014,ps_syphilis,13,738736,1.76,ekd3-qu3w
+Ohio,2014,ps_syphilis,547,11606573,4.71,ekd3-qu3w
+Oklahoma,2014,ps_syphilis,148,3879187,3.82,ekd3-qu3w
+Oregon,2014,ps_syphilis,262,3965447,6.61,ekd3-qu3w
+Pennsylvania,2014,ps_syphilis,523,12792392,4.09,ekd3-qu3w
+Rhode Island,2014,ps_syphilis,68,1056511,6.44,ekd3-qu3w
+South Carolina,2014,ps_syphilis,244,4826858,5.06,ekd3-qu3w
+South Dakota,2014,ps_syphilis,53,849670,6.24,ekd3-qu3w
+Tennessee,2014,ps_syphilis,237,6544617,3.62,ekd3-qu3w
+Texas,2014,ps_syphilis,1620,26963092,6.01,ekd3-qu3w
+Utah,2014,ps_syphilis,47,2938327,1.6,ekd3-qu3w
+Vermont,2014,ps_syphilis,5,625693,0.8,ekd3-qu3w
+Virginia,2014,ps_syphilis,287,8315430,3.45,ekd3-qu3w
+Washington,2014,ps_syphilis,337,7057531,4.78,ekd3-qu3w
+West Virginia,2014,ps_syphilis,28,1850569,1.51,ekd3-qu3w
+Wisconsin,2014,ps_syphilis,84,5753199,1.46,ekd3-qu3w
+Wyoming,2014,ps_syphilis,4,583159,0.69,ekd3-qu3w
+Alabama,2015,ps_syphilis,280,4854803,5.77,6jgb-zrsp
+Alaska,2015,ps_syphilis,8,738430,1.08,6jgb-zrsp
+Arizona,2015,ps_syphilis,589,6832810,8.62,6jgb-zrsp
+Arkansas,2015,ps_syphilis,134,2979732,4.5,6jgb-zrsp
+California,2015,ps_syphilis,4908,38904296,12.62,6jgb-zrsp
+Colorado,2015,ps_syphilis,245,5454328,4.49,6jgb-zrsp
+Connecticut,2015,ps_syphilis,92,3588561,2.56,6jgb-zrsp
+Delaware,2015,ps_syphilis,41,942065,4.35,6jgb-zrsp
+District of Columbia,2015,ps_syphilis,95,677014,14.03,6jgb-zrsp
+Florida,2015,ps_syphilis,2083,20219111,10.3,6jgb-zrsp
+Georgia,2015,ps_syphilis,1413,10183353,13.88,6jgb-zrsp
+Hawaii,2015,ps_syphilis,91,1422999,6.39,6jgb-zrsp
+Idaho,2015,ps_syphilis,57,1652495,3.45,6jgb-zrsp
+Illinois,2015,ps_syphilis,1085,12859585,8.44,6jgb-zrsp
+Indiana,2015,ps_syphilis,285,6611442,4.31,6jgb-zrsp
+Iowa,2015,ps_syphilis,75,3122541,2.4,6jgb-zrsp
+Kansas,2015,ps_syphilis,87,2910717,2.99,6jgb-zrsp
+Kentucky,2015,ps_syphilis,145,4429126,3.27,6jgb-zrsp
+Louisiana,2015,ps_syphilis,696,4666998,14.91,6jgb-zrsp
+Maine,2015,ps_syphilis,28,1329098,2.11,6jgb-zrsp
+Maryland,2015,ps_syphilis,509,5988528,8.5,6jgb-zrsp
+Massachusetts,2015,ps_syphilis,418,6797484,6.15,6jgb-zrsp
+Michigan,2015,ps_syphilis,403,9934483,4.06,6jgb-zrsp
+Minnesota,2015,ps_syphilis,246,5484002,4.49,6jgb-zrsp
+Mississippi,2015,ps_syphilis,219,2990231,7.32,6jgb-zrsp
+Missouri,2015,ps_syphilis,307,6075411,5.05,6jgb-zrsp
+Montana,2015,ps_syphilis,13,1031495,1.26,6jgb-zrsp
+Nebraska,2015,ps_syphilis,45,1892059,2.38,6jgb-zrsp
+Nevada,2015,ps_syphilis,335,2868531,11.68,6jgb-zrsp
+New Hampshire,2015,ps_syphilis,40,1337480,2.99,6jgb-zrsp
+New Jersey,2015,ps_syphilis,372,8870312,4.19,6jgb-zrsp
+New Mexico,2015,ps_syphilis,118,2090071,5.65,6jgb-zrsp
+New York,2015,ps_syphilis,2006,19657321,10.2,6jgb-zrsp
+North Carolina,2015,ps_syphilis,1196,10037218,11.92,6jgb-zrsp
+North Dakota,2015,ps_syphilis,11,755537,1.46,6jgb-zrsp
+Ohio,2015,ps_syphilis,560,11622315,4.82,6jgb-zrsp
+Oklahoma,2015,ps_syphilis,209,3910518,5.34,6jgb-zrsp
+Oregon,2015,ps_syphilis,345,4018542,8.59,6jgb-zrsp
+Pennsylvania,2015,ps_syphilis,655,12789838,5.12,6jgb-zrsp
+Rhode Island,2015,ps_syphilis,77,1056886,7.29,6jgb-zrsp
+South Carolina,2015,ps_syphilis,294,4896006,6.0,6jgb-zrsp
+South Dakota,2015,ps_syphilis,39,854663,4.56,6jgb-zrsp
+Tennessee,2015,ps_syphilis,349,6595354,5.29,6jgb-zrsp
+Texas,2015,ps_syphilis,1680,27468531,6.12,6jgb-zrsp
+Utah,2015,ps_syphilis,65,2983626,2.18,6jgb-zrsp
+Vermont,2015,ps_syphilis,9,625810,1.44,6jgb-zrsp
+Virginia,2015,ps_syphilis,334,8367303,3.99,6jgb-zrsp
+Washington,2015,ps_syphilis,445,7167287,6.21,6jgb-zrsp
+West Virginia,2015,ps_syphilis,52,1843332,2.82,6jgb-zrsp
+Wisconsin,2015,ps_syphilis,79,5762927,1.37,6jgb-zrsp
+Wyoming,2015,ps_syphilis,5,586389,0.85,6jgb-zrsp
+Alabama,2016,ps_syphilis,376,4866824,7.73,75b3-73qi
+Alaska,2016,ps_syphilis,8,742575,1.08,75b3-73qi
+Arizona,2016,ps_syphilis,721,6944767,10.38,75b3-73qi
+Arkansas,2016,ps_syphilis,150,2991815,5.01,75b3-73qi
+California,2016,ps_syphilis,5891,39149186,15.05,75b3-73qi
+Colorado,2016,ps_syphilis,250,5543844,4.51,75b3-73qi
+Connecticut,2016,ps_syphilis,110,3579830,3.07,75b3-73qi
+Delaware,2016,ps_syphilis,58,949989,6.11,75b3-73qi
+District of Columbia,2016,ps_syphilis,161,687576,23.42,75b3-73qi
+Florida,2016,ps_syphilis,2406,20627237,11.66,75b3-73qi
+Georgia,2016,ps_syphilis,1350,10308442,13.1,75b3-73qi
+Hawaii,2016,ps_syphilis,112,1428885,7.84,75b3-73qi
+Idaho,2016,ps_syphilis,50,1684036,2.97,75b3-73qi
+Illinois,2016,ps_syphilis,1260,12821709,9.83,75b3-73qi
+Indiana,2016,ps_syphilis,326,6637898,4.91,75b3-73qi
+Iowa,2016,ps_syphilis,89,3133210,2.84,75b3-73qi
+Kansas,2016,ps_syphilis,124,2912977,4.26,75b3-73qi
+Kentucky,2016,ps_syphilis,219,4440306,4.93,75b3-73qi
+Louisiana,2016,ps_syphilis,750,4681346,16.02,75b3-73qi
+Maine,2016,ps_syphilis,42,1332348,3.15,75b3-73qi
+Maryland,2016,ps_syphilis,509,6007014,8.47,75b3-73qi
+Massachusetts,2016,ps_syphilis,489,6827280,7.16,75b3-73qi
+Michigan,2016,ps_syphilis,365,9954117,3.67,75b3-73qi
+Minnesota,2016,ps_syphilis,306,5525360,5.54,75b3-73qi
+Mississippi,2016,ps_syphilis,326,2990595,10.9,75b3-73qi
+Missouri,2016,ps_syphilis,400,6091384,6.57,75b3-73qi
+Montana,2016,ps_syphilis,14,1042137,1.34,75b3-73qi
+Nebraska,2016,ps_syphilis,67,1906483,3.51,75b3-73qi
+Nevada,2016,ps_syphilis,444,2919555,15.21,75b3-73qi
+New Hampshire,2016,ps_syphilis,40,1343694,2.98,75b3-73qi
+New Jersey,2016,ps_syphilis,472,8873584,5.32,75b3-73qi
+New Mexico,2016,ps_syphilis,189,2092555,9.03,75b3-73qi
+New York,2016,ps_syphilis,2455,19636391,12.5,75b3-73qi
+North Carolina,2016,ps_syphilis,1082,10161802,10.65,75b3-73qi
+North Dakota,2016,ps_syphilis,33,756114,4.36,75b3-73qi
+Ohio,2016,ps_syphilis,716,11640060,6.15,75b3-73qi
+Oklahoma,2016,ps_syphilis,264,3928143,6.72,75b3-73qi
+Oregon,2016,ps_syphilis,327,4093271,7.99,75b3-73qi
+Pennsylvania,2016,ps_syphilis,755,12788468,5.9,75b3-73qi
+Rhode Island,2016,ps_syphilis,90,1057816,8.51,75b3-73qi
+South Carolina,2016,ps_syphilis,316,4963031,6.37,75b3-73qi
+South Dakota,2016,ps_syphilis,26,863693,3.01,75b3-73qi
+Tennessee,2016,ps_syphilis,390,6651277,5.86,75b3-73qi
+Texas,2016,ps_syphilis,1955,27914064,7.0,75b3-73qi
+Utah,2016,ps_syphilis,92,3044241,3.02,75b3-73qi
+Vermont,2016,ps_syphilis,23,624366,3.68,75b3-73qi
+Virginia,2016,ps_syphilis,459,8417651,5.45,75b3-73qi
+Washington,2016,ps_syphilis,565,7299961,7.74,75b3-73qi
+West Virginia,2016,ps_syphilis,53,1832435,2.89,75b3-73qi
+Wisconsin,2016,ps_syphilis,132,5775170,2.29,75b3-73qi
+Wyoming,2016,ps_syphilis,7,585243,1.2,75b3-73qi
+Alabama,2017,ps_syphilis,424,4877989,8.69,efpc-rr7b
+Alaska,2017,ps_syphilis,13,740983,1.75,efpc-rr7b
+Arizona,2017,ps_syphilis,943,7048088,13.38,efpc-rr7b
+Arkansas,2017,ps_syphilis,234,3003855,7.79,efpc-rr7b
+California,2017,ps_syphilis,6708,39337785,17.05,efpc-rr7b
+Colorado,2017,ps_syphilis,292,5617421,5.2,efpc-rr7b
+Connecticut,2017,ps_syphilis,110,3575324,3.08,efpc-rr7b
+Delaware,2017,ps_syphilis,57,957942,5.95,efpc-rr7b
+District of Columbia,2017,ps_syphilis,274,697079,39.31,efpc-rr7b
+Florida,2017,ps_syphilis,2390,20977089,11.39,efpc-rr7b
+Georgia,2017,ps_syphilis,1489,10417031,14.29,efpc-rr7b
+Hawaii,2017,ps_syphilis,94,1425763,6.59,efpc-rr7b
+Idaho,2017,ps_syphilis,64,1719745,3.72,efpc-rr7b
+Illinois,2017,ps_syphilis,1225,12779893,9.59,efpc-rr7b
+Indiana,2017,ps_syphilis,319,6662068,4.79,efpc-rr7b
+Iowa,2017,ps_syphilis,101,3143734,3.21,efpc-rr7b
+Kansas,2017,ps_syphilis,133,2910892,4.57,efpc-rr7b
+Kentucky,2017,ps_syphilis,262,4455590,5.88,efpc-rr7b
+Louisiana,2017,ps_syphilis,679,4673673,14.53,efpc-rr7b
+Maine,2017,ps_syphilis,65,1335743,4.87,efpc-rr7b
+Maryland,2017,ps_syphilis,573,6028186,9.51,efpc-rr7b
+Massachusetts,2017,ps_syphilis,538,6863560,7.84,efpc-rr7b
+Michigan,2017,ps_syphilis,480,9976752,4.81,efpc-rr7b
+Minnesota,2017,ps_syphilis,292,5569283,5.24,efpc-rr7b
+Mississippi,2017,ps_syphilis,310,2990674,10.37,efpc-rr7b
+Missouri,2017,ps_syphilis,507,6111382,8.3,efpc-rr7b
+Montana,2017,ps_syphilis,48,1053862,4.55,efpc-rr7b
+Nebraska,2017,ps_syphilis,43,1916998,2.24,efpc-rr7b
+Nevada,2017,ps_syphilis,587,2972097,19.75,efpc-rr7b
+New Hampshire,2017,ps_syphilis,43,1350395,3.18,efpc-rr7b
+New Jersey,2017,ps_syphilis,499,8888147,5.61,efpc-rr7b
+New Mexico,2017,ps_syphilis,193,2092844,9.22,efpc-rr7b
+New York,2017,ps_syphilis,2355,19593849,12.02,efpc-rr7b
+North Carolina,2017,ps_syphilis,1138,10275758,11.07,efpc-rr7b
+North Dakota,2017,ps_syphilis,44,756755,5.81,efpc-rr7b
+Ohio,2017,ps_syphilis,832,11665706,7.13,efpc-rr7b
+Oklahoma,2017,ps_syphilis,373,3933602,9.48,efpc-rr7b
+Oregon,2017,ps_syphilis,352,4147294,8.49,efpc-rr7b
+Pennsylvania,2017,ps_syphilis,793,12794679,6.2,efpc-rr7b
+Rhode Island,2017,ps_syphilis,71,1056554,6.72,efpc-rr7b
+South Carolina,2017,ps_syphilis,361,5027102,7.18,efpc-rr7b
+South Dakota,2017,ps_syphilis,33,873732,3.78,efpc-rr7b
+Tennessee,2017,ps_syphilis,488,6714748,7.27,efpc-rr7b
+Texas,2017,ps_syphilis,2233,28291024,7.89,efpc-rr7b
+Utah,2017,ps_syphilis,117,3103540,3.77,efpc-rr7b
+Vermont,2017,ps_syphilis,13,625132,2.08,efpc-rr7b
+Virginia,2017,ps_syphilis,536,8471011,6.33,efpc-rr7b
+Washington,2017,ps_syphilis,677,7427951,9.11,efpc-rr7b
+West Virginia,2017,ps_syphilis,62,1818683,3.41,efpc-rr7b
+Wisconsin,2017,ps_syphilis,173,5793147,2.99,efpc-rr7b
+Wyoming,2017,ps_syphilis,4,579994,0.69,efpc-rr7b
+Alabama,2018,ps_syphilis,477,4891628,9.75,b6np-zdqj
+Alaska,2018,ps_syphilis,55,736624,7.47,b6np-zdqj
+Arizona,2018,ps_syphilis,1047,7164228,14.61,b6np-zdqj
+Arkansas,2018,ps_syphilis,288,3012161,9.56,b6np-zdqj
+California,2018,ps_syphilis,7607,39437463,19.29,b6np-zdqj
+Colorado,2018,ps_syphilis,337,5697155,5.92,b6np-zdqj
+Connecticut,2018,ps_syphilis,54,3574561,1.51,b6np-zdqj
+Delaware,2018,ps_syphilis,30,966985,3.1,b6np-zdqj
+District of Columbia,2018,ps_syphilis,279,704147,39.62,b6np-zdqj
+Florida,2018,ps_syphilis,2880,21254926,13.55,b6np-zdqj
+Georgia,2018,ps_syphilis,1607,10519389,15.28,b6np-zdqj
+Hawaii,2018,ps_syphilis,92,1423102,6.46,b6np-zdqj
+Idaho,2018,ps_syphilis,46,1752074,2.63,b6np-zdqj
+Illinois,2018,ps_syphilis,1408,12724685,11.07,b6np-zdqj
+Indiana,2018,ps_syphilis,367,6698481,5.48,b6np-zdqj
+Iowa,2018,ps_syphilis,86,3149900,2.73,b6np-zdqj
+Kansas,2018,ps_syphilis,152,2912748,5.22,b6np-zdqj
+Kentucky,2018,ps_syphilis,366,4464273,8.2,b6np-zdqj
+Louisiana,2018,ps_syphilis,669,4664450,14.34,b6np-zdqj
+Maine,2018,ps_syphilis,74,1340123,5.52,b6np-zdqj
+Maryland,2018,ps_syphilis,737,6042153,12.2,b6np-zdqj
+Massachusetts,2018,ps_syphilis,552,6885720,8.02,b6np-zdqj
+Michigan,2018,ps_syphilis,649,9987286,6.5,b6np-zdqj
+Minnesota,2018,ps_syphilis,292,5608762,5.21,b6np-zdqj
+Mississippi,2018,ps_syphilis,464,2982879,15.56,b6np-zdqj
+Missouri,2018,ps_syphilis,806,6125986,13.16,b6np-zdqj
+Montana,2018,ps_syphilis,45,1061818,4.24,b6np-zdqj
+Nebraska,2018,ps_syphilis,119,1925512,6.18,b6np-zdqj
+Nevada,2018,ps_syphilis,682,3030725,22.5,b6np-zdqj
+New Hampshire,2018,ps_syphilis,64,1355064,4.72,b6np-zdqj
+New Jersey,2018,ps_syphilis,570,8891730,6.41,b6np-zdqj
+New Mexico,2018,ps_syphilis,304,2093754,14.52,b6np-zdqj
+New York,2018,ps_syphilis,2654,19544098,13.58,b6np-zdqj
+North Carolina,2018,ps_syphilis,1098,10391358,10.57,b6np-zdqj
+North Dakota,2018,ps_syphilis,41,760062,5.39,b6np-zdqj
+Ohio,2018,ps_syphilis,740,11680892,6.34,b6np-zdqj
+Oklahoma,2018,ps_syphilis,531,3943488,13.47,b6np-zdqj
+Oregon,2018,ps_syphilis,423,4183538,10.11,b6np-zdqj
+Pennsylvania,2018,ps_syphilis,797,12809107,6.22,b6np-zdqj
+Rhode Island,2018,ps_syphilis,96,1059338,9.06,b6np-zdqj
+South Carolina,2018,ps_syphilis,384,5091702,7.54,b6np-zdqj
+South Dakota,2018,ps_syphilis,41,879386,4.66,b6np-zdqj
+Tennessee,2018,ps_syphilis,553,6778180,8.16,b6np-zdqj
+Texas,2018,ps_syphilis,2538,28624564,8.87,b6np-zdqj
+Utah,2018,ps_syphilis,169,3155153,5.36,b6np-zdqj
+Vermont,2018,ps_syphilis,11,624802,1.76,b6np-zdqj
+Virginia,2018,ps_syphilis,702,8510920,8.25,b6np-zdqj
+Washington,2018,ps_syphilis,802,7526793,10.66,b6np-zdqj
+West Virginia,2018,ps_syphilis,65,1805953,3.6,b6np-zdqj
+Wisconsin,2018,ps_syphilis,152,5809319,2.62,b6np-zdqj
+Wyoming,2018,ps_syphilis,23,579054,3.97,b6np-zdqj
+Alabama,2019,ps_syphilis,618,4907965,12.59,paqx-33a8
+Alaska,2019,ps_syphilis,129,733603,17.58,paqx-33a8
+Arizona,2019,ps_syphilis,1290,7291843,17.69,paqx-33a8
+Arkansas,2019,ps_syphilis,404,3020985,13.37,paqx-33a8
+California,2019,ps_syphilis,8266,39437610,20.96,paqx-33a8
+Colorado,2019,ps_syphilis,486,5758486,8.44,paqx-33a8
+Connecticut,2019,ps_syphilis,210,3566022,5.89,paqx-33a8
+Delaware,2019,ps_syphilis,94,976668,9.62,paqx-33a8
+District of Columbia,2019,ps_syphilis,308,708253,43.49,paqx-33a8
+Florida,2019,ps_syphilis,3189,21492056,14.84,paqx-33a8
+Georgia,2019,ps_syphilis,1750,10628020,16.47,paqx-33a8
+Hawaii,2019,ps_syphilis,120,1415615,8.48,paqx-33a8
+Idaho,2019,ps_syphilis,47,1789060,2.63,paqx-33a8
+Illinois,2019,ps_syphilis,1374,12667017,10.85,paqx-33a8
+Indiana,2019,ps_syphilis,336,6731010,4.99,paqx-33a8
+Iowa,2019,ps_syphilis,132,3159596,4.18,paqx-33a8
+Kansas,2019,ps_syphilis,190,2912635,6.52,paqx-33a8
+Kentucky,2019,ps_syphilis,438,4472345,9.79,paqx-33a8
+Louisiana,2019,ps_syphilis,700,4658285,15.03,paqx-33a8
+Maine,2019,ps_syphilis,55,1345770,4.09,paqx-33a8
+Maryland,2019,ps_syphilis,868,6054954,14.34,paqx-33a8
+Massachusetts,2019,ps_syphilis,610,6894883,8.85,paqx-33a8
+Michigan,2019,ps_syphilis,679,9984795,6.8,paqx-33a8
+Minnesota,2019,ps_syphilis,385,5640053,6.83,paqx-33a8
+Mississippi,2019,ps_syphilis,690,2978227,23.17,paqx-33a8
+Missouri,2019,ps_syphilis,817,6140475,13.31,paqx-33a8
+Montana,2019,ps_syphilis,67,1070123,6.26,paqx-33a8
+Nebraska,2019,ps_syphilis,136,1932571,7.04,paqx-33a8
+Nevada,2019,ps_syphilis,808,3090771,26.14,paqx-33a8
+New Hampshire,2019,ps_syphilis,47,1360783,3.45,paqx-33a8
+New Jersey,2019,ps_syphilis,631,8891258,7.1,paqx-33a8
+New Mexico,2019,ps_syphilis,511,2099634,24.34,paqx-33a8
+New York,2019,ps_syphilis,2865,19463131,14.72,paqx-33a8
+North Carolina,2019,ps_syphilis,1139,10501384,10.85,paqx-33a8
+North Dakota,2019,ps_syphilis,45,763724,5.89,paqx-33a8
+Ohio,2019,ps_syphilis,749,11696507,6.4,paqx-33a8
+Oklahoma,2019,ps_syphilis,791,3960676,19.97,paqx-33a8
+Oregon,2019,ps_syphilis,454,4216116,10.77,paqx-33a8
+Pennsylvania,2019,ps_syphilis,991,12798883,7.74,paqx-33a8
+Rhode Island,2019,ps_syphilis,101,1058158,9.54,paqx-33a8
+South Carolina,2019,ps_syphilis,516,5157702,10.0,paqx-33a8
+South Dakota,2019,ps_syphilis,48,887127,5.41,paqx-33a8
+Tennessee,2019,ps_syphilis,676,6830325,9.9,paqx-33a8
+Texas,2019,ps_syphilis,2357,28986794,8.13,paqx-33a8
+Utah,2019,ps_syphilis,138,3203383,4.31,paqx-33a8
+Vermont,2019,ps_syphilis,11,624046,1.76,paqx-33a8
+Virginia,2019,ps_syphilis,659,8556642,7.7,paqx-33a8
+Washington,2019,ps_syphilis,816,7614024,10.72,paqx-33a8
+West Virginia,2019,ps_syphilis,79,1795263,4.4,paqx-33a8
+Wisconsin,2019,ps_syphilis,179,5824581,3.07,paqx-33a8
+Wyoming,2019,ps_syphilis,11,580116,1.9,paqx-33a8
+Alabama,2020,ps_syphilis,524,5032962,10.41,6ie8-bpiy
+Alaska,2020,ps_syphilis,173,732906,23.6,6ie8-bpiy
+Arizona,2020,ps_syphilis,1431,7186647,19.91,6ie8-bpiy
+Arkansas,2020,ps_syphilis,496,3014399,16.45,6ie8-bpiy
+California,2020,ps_syphilis,7569,39527808,19.15,6ie8-bpiy
+Colorado,2020,ps_syphilis,628,5786873,10.85,6ie8-bpiy
+Connecticut,2020,ps_syphilis,279,3579643,7.79,6ie8-bpiy
+Delaware,2020,ps_syphilis,97,991890,9.78,6ie8-bpiy
+District of Columbia,2020,ps_syphilis,241,670958,35.92,6ie8-bpiy
+Florida,2020,ps_syphilis,3411,21591325,15.8,6ie8-bpiy
+Georgia,2020,ps_syphilis,1739,10732595,16.2,6ie8-bpiy
+Hawaii,2020,ps_syphilis,180,1451130,12.4,6ie8-bpiy
+Idaho,2020,ps_syphilis,63,1849328,3.41,6ie8-bpiy
+Illinois,2020,ps_syphilis,1446,12795348,11.3,6ie8-bpiy
+Indiana,2020,ps_syphilis,512,6790290,7.54,6ie8-bpiy
+Iowa,2020,ps_syphilis,192,3191081,6.02,6ie8-bpiy
+Kansas,2020,ps_syphilis,147,2938274,5.0,6ie8-bpiy
+Kentucky,2020,ps_syphilis,427,4508271,9.47,6ie8-bpiy
+Louisiana,2020,ps_syphilis,679,4652145,14.6,6ie8-bpiy
+Maine,2020,ps_syphilis,35,1364546,2.56,6ie8-bpiy
+Maryland,2020,ps_syphilis,852,6178387,13.79,6ie8-bpiy
+Massachusetts,2020,ps_syphilis,605,6985320,8.66,6ie8-bpiy
+Michigan,2020,ps_syphilis,778,10072294,7.72,6ie8-bpiy
+Minnesota,2020,ps_syphilis,409,5710562,7.16,6ie8-bpiy
+Mississippi,2020,ps_syphilis,732,2958385,24.74,6ie8-bpiy
+Missouri,2020,ps_syphilis,806,6155074,13.09,6ie8-bpiy
+Montana,2020,ps_syphilis,44,1087156,4.05,6ie8-bpiy
+Nebraska,2020,ps_syphilis,104,1963318,5.3,6ie8-bpiy
+Nevada,2020,ps_syphilis,754,3116851,24.19,6ie8-bpiy
+New Hampshire,2020,ps_syphilis,49,1378752,3.55,6ie8-bpiy
+New Jersey,2020,ps_syphilis,745,9270476,8.04,6ie8-bpiy
+New Mexico,2020,ps_syphilis,462,2118446,21.81,6ie8-bpiy
+New York,2020,ps_syphilis,2996,20122262,14.89,6ie8-bpiy
+North Carolina,2020,ps_syphilis,1295,10450215,12.39,6ie8-bpiy
+North Dakota,2020,ps_syphilis,32,779612,4.1,6ie8-bpiy
+Ohio,2020,ps_syphilis,1062,11798534,9.0,6ie8-bpiy
+Oklahoma,2020,ps_syphilis,921,3965243,23.23,6ie8-bpiy
+Oregon,2020,ps_syphilis,622,4243544,14.66,6ie8-bpiy
+Pennsylvania,2020,ps_syphilis,1024,12995576,7.88,6ie8-bpiy
+Rhode Island,2020,ps_syphilis,86,1096487,7.84,6ie8-bpiy
+South Carolina,2020,ps_syphilis,637,5131992,12.41,6ie8-bpiy
+South Dakota,2020,ps_syphilis,63,887808,7.1,6ie8-bpiy
+Tennessee,2020,ps_syphilis,759,6927736,10.96,6ie8-bpiy
+Texas,2020,ps_syphilis,2667,29237895,9.12,6ie8-bpiy
+Utah,2020,ps_syphilis,129,3283970,3.93,6ie8-bpiy
+Vermont,2020,ps_syphilis,3,642965,0.47,6ie8-bpiy
+Virginia,2020,ps_syphilis,695,8637303,8.05,6ie8-bpiy
+Washington,2020,ps_syphilis,832,7726812,10.77,6ie8-bpiy
+West Virginia,2020,ps_syphilis,123,1791670,6.87,6ie8-bpiy
+Wisconsin,2020,ps_syphilis,356,5897371,6.04,6ie8-bpiy
+Wyoming,2020,ps_syphilis,11,577669,1.9,6ie8-bpiy
+Alabama,2021,ps_syphilis,761,5050058,15.07,x9gk-5huc
+Alaska,2021,ps_syphilis,194,734590,26.41,x9gk-5huc
+Arizona,2021,ps_syphilis,1982,7274022,27.25,x9gk-5huc
+Arkansas,2021,ps_syphilis,990,3027127,32.7,x9gk-5huc
+California,2021,ps_syphilis,8724,39152927,22.28,x9gk-5huc
+Colorado,2021,ps_syphilis,772,5814368,13.28,x9gk-5huc
+Connecticut,2021,ps_syphilis,323,3607765,8.95,x9gk-5huc
+Delaware,2021,ps_syphilis,129,1005130,12.83,x9gk-5huc
+District of Columbia,2021,ps_syphilis,257,669637,38.38,x9gk-5huc
+Florida,2021,ps_syphilis,4498,21836698,20.6,x9gk-5huc
+Georgia,2021,ps_syphilis,1884,10793038,17.46,x9gk-5huc
+Hawaii,2021,ps_syphilis,259,1446909,17.9,x9gk-5huc
+Idaho,2021,ps_syphilis,84,1904855,4.41,x9gk-5huc
+Illinois,2021,ps_syphilis,1486,12703354,11.7,x9gk-5huc
+Indiana,2021,ps_syphilis,734,6814223,10.77,x9gk-5huc
+Iowa,2021,ps_syphilis,339,3199037,10.6,x9gk-5huc
+Kansas,2021,ps_syphilis,301,2938966,10.24,x9gk-5huc
+Kentucky,2021,ps_syphilis,513,4508348,11.38,x9gk-5huc
+Louisiana,2021,ps_syphilis,995,4628595,21.5,x9gk-5huc
+Maine,2021,ps_syphilis,61,1379009,4.42,x9gk-5huc
+Maryland,2021,ps_syphilis,727,6176035,11.77,x9gk-5huc
+Massachusetts,2021,ps_syphilis,741,6996721,10.59,x9gk-5huc
+Michigan,2021,ps_syphilis,972,10042362,9.68,x9gk-5huc
+Minnesota,2021,ps_syphilis,565,5714055,9.89,x9gk-5huc
+Mississippi,2021,ps_syphilis,829,2947603,28.12,x9gk-5huc
+Missouri,2021,ps_syphilis,1316,6172551,21.32,x9gk-5huc
+Montana,2021,ps_syphilis,96,1106416,8.68,x9gk-5huc
+Nebraska,2021,ps_syphilis,185,1964697,9.42,x9gk-5huc
+Nevada,2021,ps_syphilis,939,3148472,29.82,x9gk-5huc
+New Hampshire,2021,ps_syphilis,73,1387907,5.26,x9gk-5huc
+New Jersey,2021,ps_syphilis,908,9266509,9.8,x9gk-5huc
+New Mexico,2021,ps_syphilis,724,2117300,34.19,x9gk-5huc
+New York,2021,ps_syphilis,3500,19835345,17.65,x9gk-5huc
+North Carolina,2021,ps_syphilis,1888,10565503,17.87,x9gk-5huc
+North Dakota,2021,ps_syphilis,49,777977,6.3,x9gk-5huc
+Ohio,2021,ps_syphilis,1783,11761443,15.16,x9gk-5huc
+Oklahoma,2021,ps_syphilis,1225,3992760,30.68,x9gk-5huc
+Oregon,2021,ps_syphilis,949,4254691,22.3,x9gk-5huc
+Pennsylvania,2021,ps_syphilis,1310,13016628,10.06,x9gk-5huc
+Rhode Island,2021,ps_syphilis,209,1097381,19.05,x9gk-5huc
+South Carolina,2021,ps_syphilis,836,5194346,16.09,x9gk-5huc
+South Dakota,2021,ps_syphilis,436,896303,48.64,x9gk-5huc
+Tennessee,2021,ps_syphilis,952,6966687,13.67,x9gk-5huc
+Texas,2021,ps_syphilis,3865,29572672,13.07,x9gk-5huc
+Utah,2021,ps_syphilis,205,3339874,6.14,x9gk-5huc
+Vermont,2021,ps_syphilis,9,647238,1.39,x9gk-5huc
+Virginia,2021,ps_syphilis,745,8660007,8.6,x9gk-5huc
+Washington,2021,ps_syphilis,1506,7744316,19.45,x9gk-5huc
+West Virginia,2021,ps_syphilis,212,1785921,11.87,x9gk-5huc
+Wisconsin,2021,ps_syphilis,723,5882128,12.29,x9gk-5huc
+Wyoming,2021,ps_syphilis,16,579662,2.76,x9gk-5huc
+Alabama,2022,ps_syphilis,1190,5076868,23.44,x9gk-5huc
+Alaska,2022,ps_syphilis,160,733659,21.81,x9gk-5huc
+Arizona,2022,ps_syphilis,2151,7370065,29.19,x9gk-5huc
+Arkansas,2022,ps_syphilis,1001,3047429,32.85,x9gk-5huc
+California,2022,ps_syphilis,7849,39125347,20.06,x9gk-5huc
+Colorado,2022,ps_syphilis,918,5853355,15.68,x9gk-5huc
+Connecticut,2022,ps_syphilis,243,3618707,6.72,x9gk-5huc
+Delaware,2022,ps_syphilis,238,1020279,23.33,x9gk-5huc
+District of Columbia,2022,ps_syphilis,271,674501,40.18,x9gk-5huc
+Florida,2022,ps_syphilis,4618,22413989,20.6,x9gk-5huc
+Georgia,2022,ps_syphilis,2182,10929992,19.96,x9gk-5huc
+Hawaii,2022,ps_syphilis,231,1437812,16.07,x9gk-5huc
+Idaho,2022,ps_syphilis,118,1942951,6.07,x9gk-5huc
+Illinois,2022,ps_syphilis,1457,12609577,11.55,x9gk-5huc
+Indiana,2022,ps_syphilis,686,6841491,10.03,x9gk-5huc
+Iowa,2022,ps_syphilis,334,3201890,10.43,x9gk-5huc
+Kansas,2022,ps_syphilis,347,2938034,11.81,x9gk-5huc
+Kentucky,2022,ps_syphilis,669,4521238,14.8,x9gk-5huc
+Louisiana,2022,ps_syphilis,1225,4600892,26.63,x9gk-5huc
+Maine,2022,ps_syphilis,82,1391585,5.89,x9gk-5huc
+Maryland,2022,ps_syphilis,781,6183257,12.63,x9gk-5huc
+Massachusetts,2022,ps_syphilis,824,7025465,11.73,x9gk-5huc
+Michigan,2022,ps_syphilis,972,10043906,9.68,x9gk-5huc
+Minnesota,2022,ps_syphilis,675,5727565,11.79,x9gk-5huc
+Mississippi,2022,ps_syphilis,913,2941237,31.04,x9gk-5huc
+Missouri,2022,ps_syphilis,1454,6179285,23.53,x9gk-5huc
+Montana,2022,ps_syphilis,325,1121533,28.98,x9gk-5huc
+Nebraska,2022,ps_syphilis,215,1972595,10.9,x9gk-5huc
+Nevada,2022,ps_syphilis,902,3177672,28.39,x9gk-5huc
+New Hampshire,2022,ps_syphilis,74,1396647,5.3,x9gk-5huc
+New Jersey,2022,ps_syphilis,1018,9298402,10.95,x9gk-5huc
+New Mexico,2022,ps_syphilis,761,2112859,36.02,x9gk-5huc
+New York,2022,ps_syphilis,3603,19713025,18.28,x9gk-5huc
+North Carolina,2022,ps_syphilis,2473,10705768,23.1,x9gk-5huc
+North Dakota,2022,ps_syphilis,64,780191,8.2,x9gk-5huc
+Ohio,2022,ps_syphilis,2402,11764950,20.42,x9gk-5huc
+Oklahoma,2022,ps_syphilis,1278,4025327,31.75,x9gk-5huc
+Oregon,2022,ps_syphilis,1117,4245964,26.31,x9gk-5huc
+Pennsylvania,2022,ps_syphilis,1397,12984655,10.76,x9gk-5huc
+Rhode Island,2022,ps_syphilis,133,1098275,12.11,x9gk-5huc
+South Carolina,2022,ps_syphilis,1033,5288957,19.53,x9gk-5huc
+South Dakota,2022,ps_syphilis,767,909156,84.36,x9gk-5huc
+Tennessee,2022,ps_syphilis,1126,7063325,15.94,x9gk-5huc
+Texas,2022,ps_syphilis,4655,30118002,15.46,x9gk-5huc
+Utah,2022,ps_syphilis,238,3393928,7.01,x9gk-5huc
+Vermont,2022,ps_syphilis,3,647614,0.46,x9gk-5huc
+Virginia,2022,ps_syphilis,936,8681038,10.78,x9gk-5huc
+Washington,2022,ps_syphilis,1920,7786828,24.66,x9gk-5huc
+West Virginia,2022,ps_syphilis,218,1774003,12.29,x9gk-5huc
+Wisconsin,2022,ps_syphilis,742,5903472,12.57,x9gk-5huc
+Wyoming,2022,ps_syphilis,21,581742,3.61,x9gk-5huc
+Alabama,2023,ps_syphilis,1460,5117850,28.53,x9gk-5huc
+Alaska,2023,ps_syphilis,165,734654,22.46,x9gk-5huc
+Arizona,2023,ps_syphilis,1793,7452073,24.06,x9gk-5huc
+Arkansas,2023,ps_syphilis,896,3069856,29.19,x9gk-5huc
+California,2023,ps_syphilis,6346,39181667,16.2,x9gk-5huc
+Colorado,2023,ps_syphilis,938,5912240,15.87,x9gk-5huc
+Connecticut,2023,ps_syphilis,250,3641369,6.87,x9gk-5huc
+Delaware,2023,ps_syphilis,180,1035354,17.39,x9gk-5huc
+District of Columbia,2023,ps_syphilis,271,682559,39.7,x9gk-5huc
+Florida,2023,ps_syphilis,4366,22929248,19.04,x9gk-5huc
+Georgia,2023,ps_syphilis,2210,11063669,19.98,x9gk-5huc
+Hawaii,2023,ps_syphilis,182,1434950,12.68,x9gk-5huc
+Idaho,2023,ps_syphilis,74,1970497,3.76,x9gk-5huc
+Illinois,2023,ps_syphilis,1457,12633389,11.53,x9gk-5huc
+Indiana,2023,ps_syphilis,599,6881373,8.7,x9gk-5huc
+Iowa,2023,ps_syphilis,331,3214739,10.3,x9gk-5huc
+Kansas,2023,ps_syphilis,397,2949749,13.46,x9gk-5huc
+Kentucky,2023,ps_syphilis,638,4549953,14.02,x9gk-5huc
+Louisiana,2023,ps_syphilis,1196,4598777,26.01,x9gk-5huc
+Maine,2023,ps_syphilis,74,1401992,5.28,x9gk-5huc
+Maryland,2023,ps_syphilis,876,6204927,14.12,x9gk-5huc
+Massachusetts,2023,ps_syphilis,739,7073479,10.45,x9gk-5huc
+Michigan,2023,ps_syphilis,845,10062124,8.4,x9gk-5huc
+Minnesota,2023,ps_syphilis,502,5752998,8.73,x9gk-5huc
+Mississippi,2023,ps_syphilis,886,2942470,30.11,x9gk-5huc
+Missouri,2023,ps_syphilis,1332,6205956,21.46,x9gk-5huc
+Montana,2023,ps_syphilis,312,1130612,27.6,x9gk-5huc
+Nebraska,2023,ps_syphilis,205,1988172,10.31,x9gk-5huc
+Nevada,2023,ps_syphilis,725,3211077,22.58,x9gk-5huc
+New Hampshire,2023,ps_syphilis,55,1401530,3.92,x9gk-5huc
+New Jersey,2023,ps_syphilis,751,9395315,7.99,x9gk-5huc
+New Mexico,2023,ps_syphilis,773,2119349,36.47,x9gk-5huc
+New York,2023,ps_syphilis,2887,19786543,14.59,x9gk-5huc
+North Carolina,2023,ps_syphilis,2159,10871849,19.86,x9gk-5huc
+North Dakota,2023,ps_syphilis,97,787071,12.32,x9gk-5huc
+Ohio,2023,ps_syphilis,1925,11808390,16.3,x9gk-5huc
+Oklahoma,2023,ps_syphilis,1121,4062716,27.59,x9gk-5huc
+Oregon,2023,ps_syphilis,811,4250392,19.08,x9gk-5huc
+Pennsylvania,2023,ps_syphilis,1179,13009406,9.06,x9gk-5huc
+Rhode Island,2023,ps_syphilis,90,1101183,8.17,x9gk-5huc
+South Carolina,2023,ps_syphilis,927,5390798,17.2,x9gk-5huc
+South Dakota,2023,ps_syphilis,675,917739,73.55,x9gk-5huc
+Tennessee,2023,ps_syphilis,1055,7153029,14.75,x9gk-5huc
+Texas,2023,ps_syphilis,4562,30719247,14.85,x9gk-5huc
+Utah,2023,ps_syphilis,330,3449259,9.57,x9gk-5huc
+Vermont,2023,ps_syphilis,3,647722,0.46,x9gk-5huc
+Virginia,2023,ps_syphilis,932,8732034,10.67,x9gk-5huc
+Washington,2023,ps_syphilis,1665,7838655,21.24,x9gk-5huc
+West Virginia,2023,ps_syphilis,193,1770036,10.9,x9gk-5huc
+Wisconsin,2023,ps_syphilis,540,5930350,9.11,x9gk-5huc
+Wyoming,2023,ps_syphilis,13,584666,2.22,x9gk-5huc
+Alabama,2024,ps_syphilis,1587,5163055,30.74,x9gk-5huc
+Alaska,2024,ps_syphilis,156,736537,21.18,x9gk-5huc
+Arizona,2024,ps_syphilis,1278,7556424,16.91,x9gk-5huc
+Arkansas,2024,ps_syphilis,566,3096080,18.28,x9gk-5huc
+California,2024,ps_syphilis,4142,39364774,10.52,x9gk-5huc
+Colorado,2024,ps_syphilis,707,5988502,11.81,x9gk-5huc
+Connecticut,2024,ps_syphilis,273,3674449,7.43,x9gk-5huc
+Delaware,2024,ps_syphilis,149,1050123,14.19,x9gk-5huc
+District of Columbia,2024,ps_syphilis,207,691310,29.94,x9gk-5huc
+Florida,2024,ps_syphilis,3596,23265838,15.46,x9gk-5huc
+Georgia,2024,ps_syphilis,1842,11204208,16.44,x9gk-5huc
+Idaho,2024,ps_syphilis,53,2000872,2.65,x9gk-5huc
+Illinois,2024,ps_syphilis,1214,12703033,9.56,x9gk-5huc
+Indiana,2024,ps_syphilis,541,6934754,7.8,x9gk-5huc
+Iowa,2024,ps_syphilis,370,3230454,11.45,x9gk-5huc
+Kansas,2024,ps_syphilis,401,2965252,13.52,x9gk-5huc
+Kentucky,2024,ps_syphilis,569,4584046,12.41,x9gk-5huc
+Louisiana,2024,ps_syphilis,912,4614878,19.76,x9gk-5huc
+Maine,2024,ps_syphilis,43,1408438,3.05,x9gk-5huc
+Maryland,2024,ps_syphilis,762,6245314,12.2,x9gk-5huc
+Massachusetts,2024,ps_syphilis,750,7138560,10.51,x9gk-5huc
+Michigan,2024,ps_syphilis,684,10099962,6.77,x9gk-5huc
+Minnesota,2024,ps_syphilis,438,5797405,7.56,x9gk-5huc
+Mississippi,2024,ps_syphilis,670,2950172,22.71,x9gk-5huc
+Missouri,2024,ps_syphilis,829,6243544,13.28,x9gk-5huc
+Montana,2024,ps_syphilis,189,1137557,16.61,x9gk-5huc
+Nebraska,2024,ps_syphilis,209,2005591,10.42,x9gk-5huc
+Nevada,2024,ps_syphilis,484,3253543,14.88,x9gk-5huc
+New Hampshire,2024,ps_syphilis,59,1408518,4.19,x9gk-5huc
+New Jersey,2024,ps_syphilis,729,9506354,7.67,x9gk-5huc
+New Mexico,2024,ps_syphilis,534,2126774,25.11,x9gk-5huc
+New York,2024,ps_syphilis,2361,20001419,11.8,x9gk-5huc
+North Carolina,2024,ps_syphilis,2021,11052061,18.29,x9gk-5huc
+North Dakota,2024,ps_syphilis,119,793387,15.0,x9gk-5huc
+Ohio,2024,ps_syphilis,1442,11860621,12.16,x9gk-5huc
+Oklahoma,2024,ps_syphilis,708,4097758,17.28,x9gk-5huc
+Oregon,2024,ps_syphilis,524,4265324,12.29,x9gk-5huc
+Pennsylvania,2024,ps_syphilis,931,13045848,7.14,x9gk-5huc
+Rhode Island,2024,ps_syphilis,82,1110415,7.38,x9gk-5huc
+South Carolina,2024,ps_syphilis,760,5490316,13.84,x9gk-5huc
+South Dakota,2024,ps_syphilis,294,927110,31.71,x9gk-5huc
+Tennessee,2024,ps_syphilis,1074,7251291,14.81,x9gk-5huc
+Texas,2024,ps_syphilis,3751,31318578,11.98,x9gk-5huc
+Utah,2024,ps_syphilis,258,3502983,7.37,x9gk-5huc
+Vermont,2024,ps_syphilis,10,646521,1.55,x9gk-5huc
+Virginia,2024,ps_syphilis,933,8819642,10.58,x9gk-5huc
+Washington,2024,ps_syphilis,1087,7927958,13.71,x9gk-5huc
+West Virginia,2024,ps_syphilis,118,1767402,6.68,x9gk-5huc
+Wisconsin,2024,ps_syphilis,295,5957168,4.95,x9gk-5huc
+Wyoming,2024,ps_syphilis,12,586722,2.05,x9gk-5huc

@@ -1,0 +1,150 @@
+{
+ "retrieved_utc": "2026-11-19T02:34:58+00:00",
+ "note": "Count for year Y is the previous-year cumulative column in the final week of the NNDSS table for year Y+1.",
+ "tables": {
+  "chlamydia_2013": {
+   "dataset": "qz8t-eu2e",
+   "column": "chlamydia_trachomatis_infection_cum_2013",
+   "week": 53,
+   "url": "https://data.cdc.gov/d/qz8t-eu2e"
+  },
+  "chlamydia_2014": {
+   "dataset": "97tt-n3j3",
+   "column": "chlamydia_trachomatis_infection_cum_2014",
+   "week": 52,
+   "url": "https://data.cdc.gov/d/97tt-n3j3"
+  },
+  "chlamydia_2015": {
+   "dataset": "n835-hpyp",
+   "column": "chlamydia_trachomatis_infection_cum_2015",
+   "week": 52,
+   "url": "https://data.cdc.gov/d/n835-hpyp"
+  },
+  "chlamydia_2016": {
+   "dataset": "7mbm-jety",
+   "column": "chlamydia_trachomatis_infection_cum_2016",
+   "week": 52,
+   "url": "https://data.cdc.gov/d/7mbm-jety"
+  },
+  "chlamydia_2017": {
+   "dataset": "5egk-p6rd",
+   "column": "chlamydia_trachomatis_infection_cum_2017",
+   "week": 52,
+   "url": "https://data.cdc.gov/d/5egk-p6rd"
+  },
+  "chlamydia_2018": {
+   "dataset": "kx9y-asbg",
+   "column": "chlamydia_trachomatis_infection_cum_2018",
+   "week": 52,
+   "url": "https://data.cdc.gov/d/kx9y-asbg"
+  },
+  "chlamydia_2019": {
+   "dataset": "cds4-6y7t",
+   "column": "chlamydia_trachomatis_6",
+   "week": 53,
+   "url": "https://data.cdc.gov/d/cds4-6y7t"
+  },
+  "chlamydia_2020": {
+   "dataset": "hwyy-s2tt",
+   "column": "chlamydia_trachomatis_6",
+   "week": 52,
+   "url": "https://data.cdc.gov/d/hwyy-s2tt"
+  },
+  "chlamydia_2021": {
+   "dataset": "x9gk-5huc",
+   "column": "m4 (cum previous year)",
+   "week": 52,
+   "url": "https://data.cdc.gov/d/x9gk-5huc"
+  },
+  "chlamydia_2022": {
+   "dataset": "x9gk-5huc",
+   "column": "m4 (cum previous year)",
+   "week": 52,
+   "url": "https://data.cdc.gov/d/x9gk-5huc"
+  },
+  "chlamydia_2023": {
+   "dataset": "x9gk-5huc",
+   "column": "m4 (cum previous year)",
+   "week": 52,
+   "url": "https://data.cdc.gov/d/x9gk-5huc"
+  },
+  "chlamydia_2024": {
+   "dataset": "x9gk-5huc",
+   "column": "m4 (cum previous year)",
+   "week": 53,
+   "url": "https://data.cdc.gov/d/x9gk-5huc"
+  },
+  "ps_syphilis_2013": {
+   "dataset": "fqve-8wzt",
+   "column": "syphilis_primary_and_secondary_cum_2013",
+   "week": 53,
+   "url": "https://data.cdc.gov/d/fqve-8wzt"
+  },
+  "ps_syphilis_2014": {
+   "dataset": "ekd3-qu3w",
+   "column": "syphilis_primary_and_secondary_cum_2014",
+   "week": 52,
+   "url": "https://data.cdc.gov/d/ekd3-qu3w"
+  },
+  "ps_syphilis_2015": {
+   "dataset": "6jgb-zrsp",
+   "column": "syphilis_primary_and_secondary_cum_2015",
+   "week": 52,
+   "url": "https://data.cdc.gov/d/6jgb-zrsp"
+  },
+  "ps_syphilis_2016": {
+   "dataset": "75b3-73qi",
+   "column": "syphilis_primary_and_secondary_cum_2016",
+   "week": 52,
+   "url": "https://data.cdc.gov/d/75b3-73qi"
+  },
+  "ps_syphilis_2017": {
+   "dataset": "efpc-rr7b",
+   "column": "syphilis_primary_and_secondary_cum_2017",
+   "week": 52,
+   "url": "https://data.cdc.gov/d/efpc-rr7b"
+  },
+  "ps_syphilis_2018": {
+   "dataset": "b6np-zdqj",
+   "column": "syphilis_primary_and_secondary_cum_2018",
+   "week": 52,
+   "url": "https://data.cdc.gov/d/b6np-zdqj"
+  },
+  "ps_syphilis_2019": {
+   "dataset": "paqx-33a8",
+   "column": "syphilis_primary_and_secondary_6",
+   "week": 53,
+   "url": "https://data.cdc.gov/d/paqx-33a8"
+  },
+  "ps_syphilis_2020": {
+   "dataset": "6ie8-bpiy",
+   "column": "syphilis_primary_and_secondary_6",
+   "week": 52,
+   "url": "https://data.cdc.gov/d/6ie8-bpiy"
+  },
+  "ps_syphilis_2021": {
+   "dataset": "x9gk-5huc",
+   "column": "m4 (cum previous year)",
+   "week": 52,
+   "url": "https://data.cdc.gov/d/x9gk-5huc"
+  },
+  "ps_syphilis_2022": {
+   "dataset": "x9gk-5huc",
+   "column": "m4 (cum previous year)",
+   "week": 52,
+   "url": "https://data.cdc.gov/d/x9gk-5huc"
+  },
+  "ps_syphilis_2023": {
+   "dataset": "x9gk-5huc",
+   "column": "m4 (cum previous year)",
+   "week": 52,
+   "url": "https://data.cdc.gov/d/x9gk-5huc"
+  },
+  "ps_syphilis_2024": {
+   "dataset": "x9gk-5huc",
+   "column": "m4 (cum previous year)",
+   "week": 53,
+   "url": "https://data.cdc.gov/d/x9gk-5huc"
+  }
+ }
+}
