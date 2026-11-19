@@ -82,11 +82,11 @@ def solve_fde(f, y0, t0: float, t1: float, h: float, alpha: float = 1.0):
     # f may depend on t; feed it the time of the state being evaluated
     clock = {"i": 0}
 
-    def g(y):
+    def rhs_at_current_time(y):
         return f(t[min(clock["i"], n_steps)], y)
 
     s.F[0] = f(t[0], s.y[0]); s._have_f0 = True
     for n in range(n_steps):
         clock["i"] = n + 1
-        s.advance(1, g)
+        s.advance(1, rhs_at_current_time)
     return t, s.y.copy()

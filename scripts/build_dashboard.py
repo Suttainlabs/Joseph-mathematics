@@ -302,9 +302,9 @@ def national(fits):
     years = sorted({int(y) for v in fits.values() for y in v["observed"]})
     obs = {}
     for y in years:
-        have = [s for s in fits if str(y) in v_obs(fits[s]) or y in fits[s]["observed"]]
+        have = [s for s in fits if observed_rate(fits[s], y) is not None]
         if len(have) >= len(fits) - 1:                       # allow one state missing in a year
-            obs[y] = round(sum(get_obs(fits[s], y) * w[s] for s in have) / sum(w[s] for s in have), 3)
+            obs[y] = round(sum(observed_rate(fits[s], y) * w[s] for s in have) / sum(w[s] for s in have), 3)
     keys = next(iter(fits.values()))["scenarios"].keys()
     scen = {k: [round(sum(fits[s]["scenarios"][k][i] * w[s] for s in fits) / tot, 3)
                 for i in range(len(next(iter(fits.values()))["scenarios"][k]))] for k in keys}
@@ -312,13 +312,10 @@ def national(fits):
             "population": tot, "last_cases": sum(v["last_cases"] for v in fits.values())}
 
 
-def v_obs(v):
-    return v["observed"]
-
-
-def get_obs(v, y):
-    o = v["observed"]
-    return o[y] if y in o else o[str(y)]
+def observed_rate(state_fit, year):
+    """Reported rate for a year, or None. JSON turns the year keys into strings."""
+    o = state_fit["observed"]
+    return o.get(year, o.get(str(year)))
 
 
 def main():

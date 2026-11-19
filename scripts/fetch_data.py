@@ -179,7 +179,6 @@ def populations():
 
 
 def main():
-    DATA.mkdir(exist_ok=True)
     pop = populations()
     rows, sources = [], {}
     this_year = datetime.now(timezone.utc).year
@@ -208,6 +207,7 @@ def main():
     if not rows:
         sys.exit("no rows were retrieved; nothing written")
     try:
+        DATA.mkdir(exist_ok=True)
         with open(DATA / "sti_state_year.csv", "w", newline="") as f:
             w = csv.DictWriter(f, fieldnames=list(rows[0].keys()))
             w.writeheader()
