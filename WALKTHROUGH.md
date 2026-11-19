@@ -5,73 +5,70 @@ code. Read the files in this order.
 
 ## 1. `stimodel/fde.py` — the solver
 
-Solves D^alpha y = f(t, y) with a Caputo derivative, 0 < alpha <= 1.
+Solves D^alpha y = f(y) with a Caputo derivative, 0 < alpha <= 1.
 
-- `abm_weights` builds two weight arrays. `b` weights past values of f in the
-  predictor; `c` weights them in the corrector. They come from integrating the
-  kernel (t - s)^(alpha - 1) exactly over each step.
-- `solve_fde` loops over time steps. Each step (a) predicts y with a
-  fractional Adams-Bashforth sum over the whole history, (b) evaluates f at
-  the prediction, (c) corrects with a fractional Adams-Moulton sum. The sums
-  run over all earlier steps because a fractional derivative has memory. That
-  is why cost grows with the square of the number of steps.
-- With alpha = 1 every `b` weight is 1 and the scheme becomes the ordinary
-  second-order predictor-corrector.
+- `abm_weights` builds the predictor weights `b` and corrector weights `c`.
+  They come from integrating the kernel (t - s)^(alpha - 1) over each step.
+- `FracStepper.advance` takes steps. Each one predicts with a fractional
+  Adams-Bashforth sum over the whole history, then corrects with a fractional
+  Adams-Moulton sum. The history sum is the "memory" of a fractional model.
+- `rewind` and `copy_until` let a year be re-run with a different contact
+  rate. Assimilation and forecasting both depend on that.
 
 Questions to be able to answer: Why does the history sum start at step 0?
-What happens to the weights as alpha goes to 1? Why does a small alpha need a
-small step when rates are large?
+What happens to the weights as alpha goes to 1? Why does cost grow with the
+square of the number of steps?
 
 ## 2. `stimodel/models.py` — the equations
 
-- `ChlamydiaParams.rhs` is equations (5)/(6) of the 2025 paper with N = 1.
-  Compare it line by line with the paper. `vacc = 0`, `beta2 = 0` and the
-  death rates are 0 here; those are choices made for U.S. data, and each can
-  be argued either way.
-- `reported_flux` is the modelling assumption that links the model to
-  surveillance: a reported case is an infection entering treatment, tau * I.
-- `initial_state` starts the compartments near their quasi-steady ratios so
-  the first simulated years are not dominated by a start-up transient.
-- `SyphilisParams` follows the same pattern with primary, secondary and early
-  latent stages. The fixed rates are placeholders that need sources.
+Two dataclasses, `Chlamydia` and `Syphilis`. Each has `rhs(y, beta, tau)`,
+`reported(y, tau)` (what surveillance sees: infections entering treatment)
+and `start(rate, tau)` (a starting state consistent with a reported rate).
+The contact rate `beta` is an argument, not a constant, because it is
+estimated from data.
 
-Questions: What is R0 for each model and where does `r0()` come from? Which
-fixed rate would you change first, and what source would you cite?
+Questions: Which stages transmit in the syphilis model, and why? What does
+reversion do to the dynamics? Which fixed rate would you source first?
 
-## 3. `stimodel/fit.py` — fitting and forecasting
+## 3. `stimodel/assimilate.py` — reading the contact rate off the data
 
-- `simulate` runs the solver from two years before the first data year and
-  integrates `reported_flux` over each calendar year (trapezoid rule) to get
-  annual cases per person. If `switch_year` is set, the contact and treatment
-  rates are multiplied from that year on; this is how scenarios work.
-- `fit` minimises relative errors with `scipy.optimize.least_squares`. The
-  parameters are optimised on a log scale so they stay positive. The
-  fractional fit starts from the integer-order answer.
+- `_solve_beta` finds, by root-finding on log beta, the contact rate that
+  moves the model from where it is to next year's reported rate.
+- `assimilate` does that for every year and returns a `Track`: the contact
+  rate series, the "stationary" contact rate for each year (the one that
+  would have kept cases level), and the stepper with its full history.
+- The module docstring explains why mid-year points are matched and not
+  whole-year integrals.
 
-Questions: Why relative rather than absolute errors? Why can three parameters
-not all be pinned down by twelve annual points? What does it mean that alpha
-usually stays near its starting value?
+Questions: Why is the integral-matching inversion unstable? What does it mean
+when `matched` is False? How is beta related to the growth rate of cases?
 
-## 4. `scripts/fetch_data.py` — the data
+## 4. `stimodel/learn.py` — the learned forecast
 
-Read the docstring first. The key decision is taking year Y from the
-previous-year column of the year Y+1 table. `canon_area` merges New York City
-with the rest of New York State and drops regions and territories.
+- `_features` builds six inputs per state and year.
+- `fit_model` trains one gradient-boosted regressor on all states.
+- `predict_step` gives next year's prediction, or zero if there was too
+  little history to train.
 
-## 5. `scripts/run_validation.py` — the test
+Questions: Why train on all states together? Why is the target a departure
+from the stationary rate and not the rate itself? What would leak future
+information into training, and how does the code avoid it?
 
-`backtest_one` is the experiment: fit through year T, forecast T+1 and T+2,
-compare with what was reported, and do the same for two naive forecasters.
-`final_one` fits all years and precomputes the scenario grid for the
-dashboard.
+## 5. `scripts/run_validation.py` — the experiment
 
-## 6. `scripts/build_dashboard.py` and `scripts/make_figures.py`
+`hybrid_forecast` is the loop that joins the parts: stationary rate, learned
+departure, one model step, repeat. `run_disease` runs the backtest and the
+final forecasts. `intervals` builds error bands from backtest errors and
+checks their coverage. `allocation` is the capacity exercise.
 
-Presentation only. No modelling happens here.
+## 6. `scripts/fetch_data.py`, `build_dashboard.py`, `make_figures.py`
+
+Data assembly and presentation. Read the `fetch_data.py` docstring for how
+each year's count is chosen.
 
 ## Exercises that make the code yours
 
-1. Change `omega` in the chlamydia model and rerun one state. Explain the change in the fit.
-2. Add a parameter that lowers the contact rate in 2020 only. Does the backtest improve?
+1. Add a seventh feature to the learner (for example the state's 2020 drop) and rerun the backtest. Decide in advance what result would make you keep it.
+2. Split each model into two activity groups and see whether scenario sizes become more reasonable.
 3. Replace the data with CDC's finalized AtlasPlus export and compare totals.
-4. Write the derivation of `r0()` for the syphilis model and add it as a method with a test.
+4. Derive the epidemic threshold of the syphilis model and add it as a tested method.

@@ -1,35 +1,31 @@
-# Fractional-order transmission models for chlamydia and syphilis in U.S. states: a working prototype and first backtest
+# A hybrid transmission-model and machine-learning forecaster for chlamydia and syphilis in U.S. states: prototype and backtest
 
-Joseph Egbemhenghe. Draft of 18 November 2026.
+Joseph Egbemhenghe. Draft of 18 November 2026. Version 2.
 
 ## Summary
 
-This report describes a working software prototype that fits compartmental
-transmission models to state-level CDC surveillance counts of chlamydia and
-primary and secondary (P&S) syphilis, forecasts case rates, and simulates
-changes in treatment and contact rates. It also reports a first out-of-sample
-test.
+This prototype implements, in working code, the four parts of the proposed
+framework: a multi-stage transmission model, a fractional-order formulation,
+estimation of model parameters from surveillance data, and a machine-learned
+forecast of those parameters. It produces state forecasts with error bands,
+a ranking of states, scenarios, and an allocation exercise.
 
-The pipeline runs end to end for 50 states, DC and the national total. The
-forecasts are not yet competitive. Over 2020 to 2024 the models were less
-accurate than a forecast that repeats the last observed year, and the
-fractional-order version performed about the same as the integer-order one.
-Sections 5 and 6 explain why and what would have to change.
+Tested on 2020 to 2024, the combined forecaster is clearly better than the
+transmission model with a constant contact rate. It does not beat the rule
+"next year equals this year" for chlamydia or for syphilis one year ahead,
+and is about level with it for syphilis two years ahead. The fractional order
+makes almost no difference to accuracy on annual data. The framework is
+built and measurable; it has not yet shown a forecasting advantage.
 
 ## 1. Data
 
-Case counts come from the CDC National Notifiable Diseases Surveillance System
-(NNDSS) weekly tables published on data.cdc.gov. A weekly table reports the
-current year to date and the previous year through the same week. The
-current-year column is provisional. For 2023, the week 52 national chlamydia
-count was 1,482,082, while the same year read from the following year's table
-was 1,648,444. The pipeline therefore takes each year's count from the
-previous-year column of the final week of the next year's table.
-
-Population denominators are U.S. Census Bureau 1 July state estimates
-(Vintage 2020 for 2013 to 2019, Vintage 2025 for 2020 onward).
-
-National totals over the 50 states and DC:
+Case counts: CDC National Notifiable Diseases Surveillance System (NNDSS)
+weekly tables on data.cdc.gov, 2013 to 2024, 50 states and DC. Each year's
+count is read from the previous-year column of the final week of the
+following year's table, which includes late reports. For 2023 the national
+chlamydia count read this way is 1,648,444; the provisional week 52 figure
+was 1,482,082. DC has no 2013 value and Hawaii no 2024 value. Population:
+U.S. Census Bureau 1 July estimates.
 
 | Year | Chlamydia | P&S syphilis |
 |---|---|---|
@@ -46,122 +42,124 @@ National totals over the 50 states and DC:
 | 2023 | 1,648,444 | 52,988 |
 | 2024 | 1,516,855 | 41,723 |
 
-The 2013 total omits DC and the 2024 total omits Hawaii, because the source
-tables have no value for them. These counts should be checked against CDC's
-finalized annual STI Surveillance report tables before they are cited.
+These should be checked against CDC's finalized annual report tables before
+they are cited. National Inpatient Sample data are not used.
 
-## 2. Models
+## 2. Method
 
-All compartments are fractions of the population and rates are per year.
+**Transmission models.** Chlamydia: susceptible, exposed, infected, on
+treatment, recovered, with reinfection. Syphilis: susceptible, incubating,
+primary, secondary, early latent, treated; primary and secondary cases
+transmit, early latent cases can revert to secondary, and reported P&S cases
+are primary and secondary cases entering treatment. Compartments are
+population fractions and rates are per year. Fixed rates are listed in
+`stimodel/models.py`; they are working values that still need sources.
 
-**Chlamydia.** The S-E-V-I-T-R model of Egbemhenghe, Akor, Atokolo and Amos
-(2025), doi:10.5281/zenodo.14716850, equations (5) and (6): susceptible,
-exposed, vaccinated, infected, on treatment, recovered, with force of
-infection (beta1 I + beta2 T)/N. For U.S. use the vaccination rate is zero,
-beta2 is zero and disease-induced death rates are zero.
-
-**Syphilis.** Susceptible, incubating, primary, secondary, early latent and
-treated compartments. Primary and secondary cases transmit. Early latent
-cases can revert to secondary. Reported P&S cases are the flow of primary and
-secondary cases into treatment.
-
-**Fractional order.** Each system is written with a Caputo derivative of order
-alpha between 0.6 and 1 and solved with the fractional
-Adams-Bashforth-Moulton predictor-corrector method (Diethelm, Ford and Freed,
-2002), step 0.02 years. With alpha = 1 the method reduces to the classical
-second-order scheme, so both versions share one code path. The solver
+**Fractional order.** Each system is written with a Caputo derivative of
+order alpha and solved with the fractional Adams-Bashforth-Moulton
+predictor-corrector scheme (Diethelm, Ford and Freed, 2002), 50 steps per
+year. Results are reported for alpha = 1.0 and alpha = 0.8. The solver
 reproduces the Mittag-Leffler solution of the linear test equation to within
-0.002 (see `tests/`).
+0.002.
 
-**Fixed rates.** Chlamydia: exposed to infected 12, treatment to recovered 12,
-recovered to susceptible 12, turnover 0.02. Syphilis: incubating to primary
-12, primary to secondary 8, secondary to early latent 3.4, reversion 0.5,
-early latent to late 1, latent treatment 1, return to susceptible 0.2. These
-are working values chosen for the prototype and still need literature
-sources.
+**Data assimilation.** The contact rate is not a fitted constant. For each
+state and each year it is the value that carries the model from the state it
+had reached to the next year's reported rate (annual rates are treated as
+mid-year reporting rates). This gives a contact-rate series per state. An
+earlier attempt that matched whole-year integrals was numerically unstable:
+the estimates alternated high and low with growing amplitude.
 
-## 3. Fitting
+![Estimated contact rates](results/figures/contact_rates.png)
 
-Three quantities are fitted per state and infection: the contact rate, the
-diagnosis-and-treatment rate, and initial prevalence. The fractional version
-also fits alpha, starting from the integer-order solution. Fitting is bounded
-nonlinear least squares on relative errors of annual reported rates, with a
-two-year burn-in before the first observation.
+**Learned parameter forecast.** A gradient-boosted regression model, one per
+infection and trained on all states together, predicts how far next year's
+contact rate will depart from the "stationary" rate, the one that would hold
+reported cases level. Inputs: the state's last two yearly changes, its level
+against other states, national and regional change, and case volume. A
+prediction of zero is therefore "no change". National change is the most
+used input (66% of split importance for chlamydia, 46% for syphilis).
 
-National fits on 2013 to 2024:
+**Forecast.** The learned contact rate drives the transmission model forward.
 
-| Infection | Version | alpha | Relative RMSE |
-|---|---|---|---|
-| Chlamydia | integer | 1.00 | 6.7% |
-| Chlamydia | fractional | 0.63 | 6.7% |
-| P&S syphilis | integer | 1.00 | 15.0% |
-| P&S syphilis | fractional | 0.97 | 14.9% |
+## 3. Backtest
 
-![National fits](results/figures/national_fit.png)
-
-## 4. Backtest design
-
-For each of 51 areas, each infection and each origin year T in 2019, 2020,
-2021 and 2022, the models were fitted to data through T and used to forecast
-T+1 and T+2. Two reference forecasts were added: persistence (the last
-observed rate) and a straight line through the last five training years.
-The score is absolute percentage error. This gives 204 one-year and 203
-two-year forecasts per infection and forecaster.
-
-## 5. Results
-
-Median absolute percentage error across states:
+Origins 2019 to 2023. At each origin the learner is trained on data up to
+that year only. Forecasts one and two years ahead are scored for every state
+with a reported value (254 one-year and 203 two-year forecasts per
+infection). Median absolute percentage error:
 
 | Forecaster | Chlamydia, 1 yr | Chlamydia, 2 yr | Syphilis, 1 yr | Syphilis, 2 yr |
 |---|---|---|---|---|
-| Model, integer order | 11.2% | 17.4% | 21.6% | 33.2% |
-| Model, fractional order | 11.1% | 17.0% | 21.4% | 33.1% |
-| Persistence | 6.0% | 8.9% | 17.0% | 30.1% |
-| Five-year trend | 7.6% | 10.4% | 19.7% | 32.5% |
+| Transmission model + learned contact rate, alpha 1.0 | 8.6% | 17.0% | 22.1% | 29.4% |
+| Same, alpha 0.8 | 8.5% | 16.8% | 21.5% | 29.4% |
+| Transmission model, contact rate held constant, alpha 1.0 | 12.5% | 20.3% | 21.7% | 52.4% |
+| Same, alpha 0.8 | 10.8% | 15.9% | 22.0% | 47.3% |
+| Learner on reported rates, no transmission model | 8.4% | 17.3% | 20.8% | 28.8% |
+| Next year equals this year | 6.8% | 8.9% | 18.5% | 30.1% |
+| Five-year straight line | 6.6% | 10.4% | 23.6% | 32.5% |
 
 ![Backtest](results/figures/backtest.png)
 
-Three findings.
+What the table shows:
 
-1. Persistence was the most accurate forecaster in all four columns.
-2. The fractional-order model had a lower error than the integer-order model
-   in 63% of chlamydia forecasts and 52% of syphilis forecasts, but the median
-   difference was under 0.05 percentage points. This test does not show a
-   meaningful accuracy gain from the fractional order.
-3. In 81% of backtest fits the fitted alpha stayed at 0.9 or above, close to
-   its starting value. Annual data carry little information about alpha.
+1. Adding the learner to the transmission model cut its error in three of
+   four columns, and by almost half for syphilis two years ahead.
+2. The combined forecaster was more accurate than "next year equals this
+   year" in 28% of chlamydia forecasts and 47% of syphilis forecasts.
+3. The combined forecaster and the learner without a transmission model
+   score within 1.3 percentage points of each other. On this data the
+   transmission model adds structure for scenarios but not accuracy.
+4. Alpha 0.8 beat alpha 1.0 in 56% of chlamydia and 52% of syphilis
+   forecasts, with a median difference under 0.1 percentage points. With the
+   contact rate held constant the gap is larger and favours alpha 0.8 in
+   three columns.
+5. Errors are largest where the trend turned: forecasts made from 2019
+   (before the 2020 reporting drop) and syphilis forecasts made from 2022 and
+   2023 (before and during the decline).
 
-The syphilis model did better than persistence at the national level for
-origins 2019 and 2020, when cases were still rising steadily, and much worse
-for origin 2022, when it projected continued growth into the 2023 and 2024
-decline.
+A first formulation, in which the learner predicted the year-on-year change
+in the contact rate directly, scored 8.1%, 15.6%, 24.8% and 50.8% at alpha
+1.0. The formulation above replaced it after that result. Both were scored
+on the same years, so the improvement is not an independent confirmation.
+
+## 4. Forecasts and error bands
+
+Five-year forecasts start from 2024. The population-weighted national
+forecast for 2026 is 463 chlamydia cases per 100,000 (448 reported in 2024)
+and 8.7 P&S syphilis cases per 100,000 (12.3 in 2024).
+
+Error bands come from the backtest: the range that held 80% of past
+forecast-to-outcome ratios at each horizon. When each origin was held out in
+turn, the bands covered 69% and 78% of chlamydia outcomes (one and two years)
+and 68% and 67% of syphilis outcomes. They are too narrow. Past forecasts
+also ran high, so the bands sit mostly below the central forecast.
+
+## 5. Scenarios and allocation
+
+Scenarios scale the diagnosis-and-treatment rate (10, 20, 30% faster) or the
+contact rate (5, 10% lower) from 2025. The models sit close to the epidemic
+threshold, so modest changes produce large modelled effects: in Texas a 30%
+faster treatment rate lowers modelled P&S syphilis by 96% by 2029. These
+magnitudes are not credible and are shown as direction only.
+
+The allocation exercise gives each state between 0 and 30% extra
+treatment capacity under a fixed budget, with cost assumed proportional to
+caseload. Targeting averts 0.5% more modelled chlamydia cases and 1.4% more
+syphilis cases than an even 10% everywhere. Under these assumptions targeting
+by state makes little difference.
 
 ## 6. Limitations
 
-- Twelve annual points per state are few for models with three or four free
-  parameters.
-- Rates are constant in time. The models cannot represent the 2020 reporting
-  drop or the syphilis downturn after 2022.
-- The fitted models sit near the epidemic threshold, so scenario results are
-  very sensitive. In some states a 50% faster treatment rate drives modelled
-  cases to zero within four years. That is a property of the fit, not a
-  credible prediction.
-- Reported cases are treated as all infections. Undiagnosed infection and
-  changes in screening volume are not modelled.
-- There is no sex, age or sexual-network structure.
-- There are no uncertainty intervals.
-- The Caputo derivative is applied without rescaling the rate constants, so
-  parameter units differ between the two versions.
-- No machine-learning component has been built. Parameter estimation here is
-  ordinary numerical optimization.
-- National Inpatient Sample data are not used.
-
-## 7. Next steps
-
-See `ROADMAP.md`. The changes most likely to matter are longer and
-finer-grained data (finalized CDC series back to 2000, county level, by sex),
-time-varying contact and screening rates, and a hierarchical fit that shares
-information across states.
+- Twelve annual points per state. The learner has a few hundred training rows.
+- No sex, age or sexual-network structure, and no separation of screening
+  volume from true incidence. Reported cases are treated as all infections.
+- The 2020 reporting drop is in the training data with no special handling.
+- Fixed rates are unsourced working values.
+- Scenario magnitudes are unreliable, as described above.
+- Error bands under-cover.
+- The Caputo derivative is applied without rescaling rate constants.
+- State-level only. No county data, no congenital syphilis, no NIS data.
+- The model formulation was revised once after seeing backtest results.
 
 ## References
 

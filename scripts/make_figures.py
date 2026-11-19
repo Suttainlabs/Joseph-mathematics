@@ -7,6 +7,7 @@ from pathlib import Path
 import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
+import numpy as np
 import pandas as pd
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -44,40 +45,37 @@ def save_figure(fig, name):
         raise SystemExit(f"could not write {path}: {e}")
 
 
-def national():
-    fits = read_json(RES / "fits.json")
-    fig, axes = plt.subplots(1, 2, figsize=(11, 4))
+def contact_rates():
+    """Estimated contact rate by year: median and middle half of states."""
+    fc = read_json(RES / "forecasts.json")
+    fig, axes = plt.subplots(1, 2, figsize=(11, 3.8))
     for ax, dis in zip(axes, TITLES):
-        f = fits["fits"][dis]["United States"]
-        obs = {int(k): v for k, v in f["observed"].items()}
-        first = f["integer"]["first_year"]
-        yrs = list(range(first, fits["forecast_to"] + 1))
-        ax.axvspan(max(obs) + 0.5, yrs[-1] + 0.5, color="#f6f5f1")
-        ax.plot(yrs, f["integer"]["scenarios"]["1.0|1.0"], color=BLUE, lw=2, label="Integer order")
-        ax.plot(yrs, f["fractional"]["scenarios"]["1.0|1.0"], color=ORANGE, lw=2, ls="--",
-                label=f"Fractional order (alpha = {f['fractional']['alpha']:.2f})")
-        ax.plot(list(obs), list(obs.values()), color=INK, lw=2, marker="o", ms=5, label="Reported")
-        ax.set_title(f"{TITLES[dis]}, United States", loc="left", fontsize=11)
-        ax.set_ylabel("Cases per 100,000")
-        ax.set_ylim(bottom=0)
+        fits = fc["fits"][dis]
+        beta = np.array([v["beta"] for v in fits.values()])
+        years = np.arange(fc["last_data_year"] - beta.shape[1] + 1, fc["last_data_year"] + 1)
+        q1, med, q3 = np.percentile(beta, [25, 50, 75], axis=0)
+        ax.fill_between(years, q1, q3, color=BLUE, alpha=0.18, lw=0, label="Middle half of states")
+        ax.plot(years, med, color=BLUE, lw=2, marker="o", ms=4, label="Median state")
+        ax.set_title(f"{TITLES[dis]}: estimated contact rate", loc="left", fontsize=11)
+        ax.set_ylabel("Contact rate (per year)")
         ax.grid(axis="y", color="#e4e3df")
         ax.spines[["top", "right"]].set_visible(False)
         ax.legend(frameon=False, fontsize=9)
     fig.tight_layout()
-    save_figure(fig, "national_fit.png")
+    save_figure(fig, "contact_rates.png")
 
 
 def backtest():
     s = read_summary(RES / "summary.csv")
-    order = ["integer", "fractional", "persistence", "trend"]
-    labels = ["Model,\ninteger", "Model,\nfractional", "Persistence", "Five-year\ntrend"]
-    fig, axes = plt.subplots(1, 4, figsize=(12, 3.6))
+    order = ["hybrid_a1.0", "hybrid_a0.8", "ml_rate", "persistence", "trend"]
+    labels = ["Hybrid", "Hybrid,\norder 0.8", "Learner\nonly", "Persist-\nence", "Trend"]
+    fig, axes = plt.subplots(1, 4, figsize=(13.5, 3.6))
     i = 0
     for dis in TITLES:
         for h in (1, 2):
             ax = axes[i]; i += 1
             g = s[(s.disease == dis) & (s.horizon == h)].set_index("model").reindex(order)
-            bars = ax.bar(labels, g["median"], color=[BLUE, BLUE, GREY, GREY], width=0.6)
+            bars = ax.bar(labels, g["median"], color=[BLUE, BLUE, GREY, GREY, GREY], width=0.6)
             ax.bar_label(bars, fmt="%.1f%%", fontsize=9)
             ax.set_title(f"{TITLES[dis]}\n{h}-year-ahead", loc="left", fontsize=10)
             ax.tick_params(axis="x", labelsize=8)
@@ -89,6 +87,6 @@ def backtest():
 
 
 if __name__ == "__main__":
-    national()
+    contact_rates()
     backtest()
     print("figures written")

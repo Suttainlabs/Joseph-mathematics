@@ -4,11 +4,14 @@ Solves the Caputo initial value problem
 
     D^alpha y(t) = f(t, y),   y(t0) = y0,   0 < alpha <= 1
 
-with the scheme of Diethelm, Ford and Freed (2002), the same generalized
-Adams-Bashforth-Moulton method used in Egbemhenghe et al. (2025),
-doi:10.5281/zenodo.14716850. With alpha = 1 the scheme reduces to the
-classical second-order Adams predictor-corrector, so the integer-order
-model is solved by the same code path as the fractional one.
+with the scheme of Diethelm, Ford and Freed (2002). With alpha = 1 it reduces
+to the classical second-order Adams predictor-corrector, so integer-order and
+fractional-order models share one code path.
+
+`FracStepper` is the resumable form used for data assimilation: it keeps the
+whole history (a fractional derivative has memory), can be advanced a few
+steps at a time with changing parameters, and can be rewound to an earlier
+step so that a period can be re-simulated with a different parameter value.
 """
 from __future__ import annotations
 
@@ -25,28 +28,65 @@ def abm_weights(alpha: float, n_steps: int):
     return b, c
 
 
+class FracStepper:
+    def __init__(self, y0, h: float, alpha: float, max_steps: int):
+        if not 0 < alpha <= 1:
+            raise ValueError("alpha must be in (0, 1]")
+        self.h, self.alpha, self.max_steps = h, alpha, max_steps
+        y0 = np.asarray(y0, dtype=float)
+        self.y = np.empty((max_steps + 1, y0.size))
+        self.F = np.empty_like(self.y)
+        self.y[0] = y0
+        self.n = 0                      # index of the latest computed state
+        self._have_f0 = False
+        self.b, self.c = abm_weights(alpha, max_steps)
+        self.hp = h ** alpha / gamma(alpha + 1)
+        self.hc = h ** alpha / gamma(alpha + 2)
+
+    def copy_until(self, n: int) -> "FracStepper":
+        """A new stepper holding the history up to step n."""
+        s = FracStepper(self.y[0], self.h, self.alpha, self.max_steps)
+        s.y[: n + 1] = self.y[: n + 1]
+        s.F[: n + 1] = self.F[: n + 1]
+        s.n, s._have_f0 = n, True
+        return s
+
+    def advance(self, k: int, f):
+        """Take k steps with right-hand side f(y). Returns states n..n+k."""
+        y, F, a = self.y, self.F, self.alpha
+        if not self._have_f0:
+            F[0] = f(y[0])
+            self._have_f0 = True
+        start = self.n
+        if start + k > self.max_steps:
+            raise ValueError("stepper history is full")
+        for n in range(start, start + k):
+            yp = y[0] + self.hp * (self.b[n::-1] @ F[: n + 1])
+            hist = (n ** (a + 1) - (n - a) * (n + 1) ** a) * F[0]
+            if n >= 1:
+                hist = hist + self.c[n - 1::-1] @ F[1: n + 1]
+            y[n + 1] = y[0] + self.hc * (f(yp) + hist)
+            F[n + 1] = f(y[n + 1])
+        self.n = start + k
+        return y[start: self.n + 1]
+
+    def rewind(self, n: int):
+        self.n = n
+
+
 def solve_fde(f, y0, t0: float, t1: float, h: float, alpha: float = 1.0):
-    """Integrate from t0 to t1 with step h. Returns (t, y) with y[i] = y(t[i])."""
-    if not 0 < alpha <= 1:
-        raise ValueError("alpha must be in (0, 1]")
+    """Integrate an autonomous-or-not system from t0 to t1. Returns (t, y)."""
     n_steps = int(round((t1 - t0) / h))
     t = t0 + h * np.arange(n_steps + 1)
-    y0 = np.asarray(y0, dtype=float)
-    y = np.empty((n_steps + 1, y0.size))
-    F = np.empty_like(y)
-    y[0] = y0
-    F[0] = f(t[0], y0)
-    b, c = abm_weights(alpha, n_steps)
-    hp = h ** alpha / gamma(alpha + 1)
-    hc = h ** alpha / gamma(alpha + 2)
+    s = FracStepper(y0, h, alpha, n_steps)
+    # f may depend on t; feed it the time of the state being evaluated
+    clock = {"i": 0}
+
+    def g(y):
+        return f(t[min(clock["i"], n_steps)], y)
+
+    s.F[0] = f(t[0], s.y[0]); s._have_f0 = True
     for n in range(n_steps):
-        # predictor: sum_{j=0..n} b_{n+1-j} F_j
-        yp = y0 + hp * (b[n::-1] @ F[: n + 1])
-        # corrector: a_0 F_0 + sum_{j=1..n} c_{n+1-j} F_j + f(predictor)
-        a0 = n ** (alpha + 1) - (n - alpha) * (n + 1) ** alpha
-        hist = a0 * F[0]
-        if n >= 1:
-            hist = hist + c[n - 1::-1] @ F[1: n + 1]
-        y[n + 1] = y0 + hc * (f(t[n + 1], yp) + hist)
-        F[n + 1] = f(t[n + 1], y[n + 1])
-    return t, y
+        clock["i"] = n + 1
+        s.advance(1, g)
+    return t, s.y.copy()

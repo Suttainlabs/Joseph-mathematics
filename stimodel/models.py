@@ -1,110 +1,98 @@
-"""Compartmental models. All compartments are fractions of the population
-(they sum to 1) and all rates are per year.
+"""Multi-stage compartmental models.
 
-Chlamydia: the S-E-V-I-T-R model of Egbemhenghe, Akor, Atokolo and Amos
-(2025), doi:10.5281/zenodo.14716850, equations (5)-(6).
+Compartments are fractions of the population (they sum to 1); rates are per
+year. Each model exposes
 
-Syphilis: a multi-stage model with incubating, primary, secondary and early
-latent stages, reversion from early latent back to secondary, and treatment.
+    rhs(y, beta, tau)     the right-hand side for a given contact rate beta
+                          and diagnosis-and-treatment rate tau
+    reported(y, tau)      the rate at which infections are diagnosed, which
+                          is what surveillance counts
+    start(rate, tau)      a starting state consistent with a reported rate
+
+beta is not a constant of the model. It is estimated year by year from
+surveillance data (see assimilate.py) and forecast by a learned model
+(see learn.py).
 """
 from __future__ import annotations
 
-from dataclasses import dataclass, replace
+from dataclasses import dataclass
 
 import numpy as np
 
 
 @dataclass(frozen=True)
-class ChlamydiaParams:
-    beta1: float            # effective contact rate, susceptible x infected   (fitted)
-    tau: float              # diagnosis-and-treatment rate of infected         (fitted)
-    beta2: float = 0.0      # contact rate with people on treatment; set to 0
+class Chlamydia:
+    """Susceptible, exposed, infected (undiagnosed), on treatment, recovered.
+    Reinfection is allowed after a short recovered period."""
+    tau: float = 1.0        # diagnosis-and-treatment rate (mean 1 year to diagnosis or clearance)
     sigma: float = 12.0     # exposed -> infected
     gamma: float = 12.0     # on treatment -> recovered
-    omega: float = 12.0     # recovered -> susceptible (no lasting immunity)
+    omega: float = 12.0     # recovered -> susceptible
     mu: float = 0.02        # population turnover
-    delta1: float = 0.0     # disease-induced death, infected
-    delta2: float = 0.0     # disease-induced death, on treatment
-    vacc: float = 0.0       # vaccination rate; 0 because no chlamydia vaccine is licensed
-    wane: float = 0.5       # vaccine waning rate (inactive while vacc = 0)
+    names = ("S", "E", "I", "T", "R")
 
-    names = ("S", "E", "V", "I", "T", "R")
-
-    def rhs(self, y):
-        S, E, V, I, T, R = y
-        lam = self.beta1 * I + self.beta2 * T          # N = 1
+    def rhs(self, y, beta, tau):
+        S, E, I, T, R = y
+        lam = beta * I
         return np.array([
-            self.mu + self.wane * V + self.omega * R - (lam + self.vacc + self.mu) * S,
+            self.mu + self.omega * R - (lam + self.mu) * S,
             lam * S - (self.sigma + self.mu) * E,
-            self.vacc * S - (self.wane + self.mu) * V,
-            self.sigma * E - (self.tau + self.delta1 + self.mu) * I,
-            self.tau * I - (self.gamma + self.delta2 + self.mu) * T,
+            self.sigma * E - (tau + self.mu) * I,
+            tau * I - (self.gamma + self.mu) * T,
             self.gamma * T - (self.omega + self.mu) * R,
         ])
 
-    def reported_flux(self, y):
-        """Rate at which infections are diagnosed (what surveillance counts)."""
-        return self.tau * y[..., 3]
+    def reported(self, y, tau):
+        return tau * y[..., 2]
 
-    def initial_state(self, i0):
-        e0 = i0 * (self.tau + self.mu) / self.sigma
-        t0 = i0 * self.tau / self.gamma
-        r0 = t0 * self.gamma / self.omega
-        return np.array([1 - e0 - i0 - t0 - r0, e0, 0.0, i0, t0, r0])
-
-    def r0(self):
-        """Basic reproduction number with vacc = 0."""
-        k1 = self.sigma + self.mu
-        k2 = self.tau + self.delta1 + self.mu
-        k3 = self.gamma + self.delta2 + self.mu
-        return self.sigma / k1 * (self.beta1 / k2 + self.beta2 * self.tau / (k2 * k3))
+    def start(self, rate, tau):
+        i = rate / tau
+        e = i * (tau + self.mu) / self.sigma
+        t = rate / self.gamma
+        r = rate / self.omega
+        return np.array([1 - e - i - t - r, e, i, t, r])
 
 
 @dataclass(frozen=True)
-class SyphilisParams:
-    beta: float             # effective contact rate, primary + secondary     (fitted)
-    tau: float              # diagnosis-and-treatment rate, primary/secondary  (fitted)
+class Syphilis:
+    """Susceptible, incubating, primary, secondary, early latent, treated.
+    Primary and secondary cases transmit. Early latent cases can revert to
+    secondary. Reported P&S cases are primary and secondary cases entering
+    treatment."""
+    tau: float = 4.0        # diagnosis-and-treatment rate in primary/secondary (about 3 months)
     sigma: float = 12.0     # incubating -> primary
     k1: float = 8.0         # primary -> secondary (about 6.5 weeks)
     k2: float = 3.4         # secondary -> early latent (about 3.5 months)
     rev: float = 0.5        # early latent -> secondary (reversion)
     k3: float = 1.0         # early latent -> late, non-infectious
     tau_l: float = 1.0      # treatment rate in early latent stage
-    omega: float = 0.2      # treated/removed -> susceptible
+    omega: float = 0.2      # treated -> susceptible
     mu: float = 0.02
-
     names = ("S", "E", "I1", "I2", "L", "T")
 
-    def rhs(self, y):
+    def rhs(self, y, beta, tau):
         S, E, I1, I2, L, T = y
-        lam = self.beta * (I1 + I2)
+        lam = beta * (I1 + I2)
         return np.array([
             self.mu + self.omega * T - (lam + self.mu) * S,
             lam * S - (self.sigma + self.mu) * E,
-            self.sigma * E - (self.k1 + self.tau + self.mu) * I1,
-            self.k1 * I1 + self.rev * L - (self.k2 + self.tau + self.mu) * I2,
+            self.sigma * E - (self.k1 + tau + self.mu) * I1,
+            self.k1 * I1 + self.rev * L - (self.k2 + tau + self.mu) * I2,
             self.k2 * I2 - (self.rev + self.tau_l + self.k3 + self.mu) * L,
-            self.tau * (I1 + I2) + (self.tau_l + self.k3) * L - (self.omega + self.mu) * T,
+            tau * (I1 + I2) + (self.tau_l + self.k3) * L - (self.omega + self.mu) * T,
         ])
 
-    def reported_flux(self, y):
-        return self.tau * (y[..., 2] + y[..., 3])
+    def reported(self, y, tau):
+        return tau * (y[..., 2] + y[..., 3])
 
-    def initial_state(self, i0):
-        i1 = i0
-        i2 = i1 * self.k1 / (self.k2 + self.tau)
+    def start(self, rate, tau):
+        # split primary + secondary = rate / tau by their relative durations
+        tot = rate / tau
+        i1 = tot * (self.k2 + tau) / (self.k1 + self.k2 + tau)
+        i2 = tot - i1
         lat = i2 * self.k2 / (self.rev + self.tau_l + self.k3)
-        e0 = i1 * (self.k1 + self.tau) / self.sigma
-        return np.array([1 - e0 - i1 - i2 - lat, e0, i1, i2, lat, 0.0])
+        e = i1 * (self.k1 + tau) / self.sigma
+        return np.array([1 - e - i1 - i2 - lat, e, i1, i2, lat, 0.0])
 
 
-MODELS = {"chlamydia": ChlamydiaParams, "ps_syphilis": SyphilisParams}
-# name of the transmission and treatment parameters in each model
-BETA = {"chlamydia": "beta1", "ps_syphilis": "beta"}
-
-
-def with_scenario(params, contact_mult: float = 1.0, treat_mult: float = 1.0):
-    """Scale the contact rate and the diagnosis-and-treatment rate."""
-    key = "beta1" if hasattr(params, "beta1") else "beta"
-    return replace(params, **{key: getattr(params, key) * contact_mult,
-                              "tau": params.tau * treat_mult})
+MODELS = {"chlamydia": Chlamydia(), "ps_syphilis": Syphilis()}

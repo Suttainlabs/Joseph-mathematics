@@ -3,34 +3,36 @@
 This is a starting draft. Dates, partners and scope are for Joseph Egbemhenghe
 to set; nothing here has been agreed with any outside party.
 
-## Stage 1. Better data (months 1 to 4)
-- Replace NNDSS weekly-table counts with CDC's finalized annual series
-  (AtlasPlus export), extending back to 2000.
-- Add county-level counts and breakdowns by sex and age group.
-- Add congenital syphilis.
-- Decide whether National Inpatient Sample data add anything; if so, obtain it
-  under the AHRQ data use agreement.
+## Stage 1. Data (months 1 to 4)
+- CDC's finalized annual series back to 2000 (AtlasPlus export), replacing the
+  NNDSS weekly-table counts. Twelve years is the main limit on the learner.
+- County-level counts, and breakdowns by sex and age group.
+- Congenital syphilis.
+- National Inpatient Sample: hospital stays coded A50-A53 (syphilis) and
+  A55-A56, A74 (chlamydial infection), obtained under the AHRQ data use
+  agreement, to add a severity and cost layer the case counts lack.
+- Testing volume, if a usable source exists, to separate screening from incidence.
 
-## Stage 2. Better models (months 3 to 9)
-- Time-varying contact and screening rates, including the 2020 disruption.
-- Separate undiagnosed from diagnosed infection; use testing volume if available.
-- Hierarchical (partial pooling) fit across states.
+## Stage 2. Model (months 3 to 9)
+- Sex and age structure; a higher-activity group so the model is not pinned
+  to the epidemic threshold and scenario sizes become believable.
+- Separate undiagnosed from diagnosed infection.
 - Source every fixed rate from the literature.
-- Uncertainty intervals by bootstrap or Bayesian fitting.
 - Re-test the fractional order on monthly or quarterly data, where memory
   effects are more likely to be identifiable.
-- Target: beat persistence on one-year-ahead state forecasts.
 
-## Stage 3. Machine-learning component (months 6 to 12)
-- Gradient-boosted or neural forecaster on the same data as a comparison.
-- Hybrid: learn the residuals of the mechanistic model.
-- Report all forecasters against the same backtest.
+## Stage 3. Learning (months 4 to 10)
+- Retrain the learner on the longer series and add covariates.
+- Explicit handling of reporting shocks such as 2020.
+- Calibrated error bands (the current ones cover about 70%, not 80%).
+- Fix the evaluation plan before each change, and keep the most recent years
+  as an untouched test set.
+- Target: beat "next year equals this year" one year ahead at state level.
 
 ## Stage 4. Users and review (months 9 to 18)
 - Show the tool to epidemiologists at state or local health departments and
   record what they would need from it.
 - Submit the method and backtest for peer review.
-- Enter forecasts in an open forecasting exercise if one exists for STIs.
 
 ## Stage 5. Maintenance
 - Annual data refresh and re-run of the backtest.
