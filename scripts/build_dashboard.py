@@ -49,6 +49,16 @@ def read_json(path):
             return json.load(f)
     except FileNotFoundError:
         raise SystemExit(f"{path} not found; run the earlier pipeline steps first")
+    except (OSError, json.JSONDecodeError) as e:
+        raise SystemExit(f"cannot read {path}: {e}")
+
+
+def read_summary(path):
+    """Load the backtest summary table, with a clear message if it is missing or damaged."""
+    try:
+        return pd.read_csv(path)
+    except (OSError, pd.errors.ParserError) as e:
+        raise SystemExit(f"cannot read {path}: {e}. Run scripts/run_validation.py first.")
 
 
 TEMPLATE = r"""<!DOCTYPE html>
@@ -259,7 +269,7 @@ drawBacktest(); render();
 def main():
     res = ROOT / "results"
     fits = read_json(res / "fits.json")
-    summ = pd.read_csv(res / "summary.csv")
+    summ = read_summary(res / "summary.csv")
     src = read_json(ROOT / "data" / "SOURCES.json")
     bt = {f"{r.disease}|{r.horizon}|{r.model}": {"median": r["median"], "mean": r["mean"], "n": int(r.n)}
           for _, r in summ.iterrows()}
@@ -272,8 +282,12 @@ def main():
             .replace("__SCEN_YEAR__", str(max(f["integer"]["last_data_year"] for f in fits["fits"]["chlamydia"].values()) + 1))
             .replace("__BUILD_DATE__", date.today().isoformat())
             .replace("__RETRIEVED__", src["retrieved_utc"][:10]))
-    (ROOT / "docs").mkdir(exist_ok=True)
-    (ROOT / "docs" / "index.html").write_text(html, encoding="utf-8")
+    out = ROOT / "docs" / "index.html"
+    try:
+        out.parent.mkdir(exist_ok=True)
+        out.write_text(html, encoding="utf-8")
+    except OSError as e:
+        raise SystemExit(f"could not write {out}: {e}")
     print("wrote docs/index.html", len(html) // 1024, "KB")
 
 

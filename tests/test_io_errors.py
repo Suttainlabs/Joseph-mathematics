@@ -43,3 +43,44 @@ def test_canon_area_merges_new_york_and_drops_regions():
     assert fd.canon_area("NEW YORK (excluding New York City)") == "NEW YORK"
     assert fd.canon_area("NEW ENGLAND") is None
     assert fd.canon_area("Texas") == "TEXAS"
+
+
+def test_read_summary_reports_missing_file(tmp_path):
+    for name in ("build_dashboard", "make_figures"):
+        mod = load(name)
+        with pytest.raises(SystemExit, match="run_validation.py first"):
+            mod.read_summary(tmp_path / "summary.csv")
+
+
+def test_read_json_reports_damaged_file(tmp_path):
+    bad = tmp_path / "fits.json"
+    bad.write_text("{not json")
+    with pytest.raises(SystemExit, match="cannot read"):
+        load("make_figures").read_json(bad)
+
+
+def test_read_cases_reports_missing_table(tmp_path, monkeypatch):
+    rv = load("run_validation")
+    monkeypatch.setattr(rv, "ROOT", tmp_path)
+    with pytest.raises(SystemExit, match="fetch_data.py first"):
+        rv.read_cases()
+
+
+def test_write_outputs_reports_unwritable_folder(tmp_path):
+    import pandas as pd
+    rv = load("run_validation")
+    blocker = tmp_path / "results"
+    blocker.write_text("a file where the folder should be")
+    with pytest.raises(SystemExit, match="could not write results"):
+        rv.write_outputs(blocker, pd.DataFrame({"a": [1]}), pd.DataFrame({"a": [1]}), {})
+
+
+def test_save_figure_reports_unwritable_folder(tmp_path, monkeypatch):
+    import matplotlib.pyplot as plt
+    mf = load("make_figures")
+    (tmp_path / "figures").write_text("a file where the folder should be")
+    monkeypatch.setattr(mf, "RES", tmp_path)
+    fig = plt.figure()
+    with pytest.raises(SystemExit, match="could not write"):
+        mf.save_figure(fig, "x.png")
+    plt.close(fig)

@@ -78,7 +78,10 @@ def _fetch(url: str, tries: int = 4) -> bytes:
 
 
 def get_json(url: str):
-    return json.loads(_fetch(url))
+    try:
+        return json.loads(_fetch(url))
+    except json.JSONDecodeError as e:
+        raise RuntimeError(f"{url} did not return valid JSON: {e}")
 
 
 def get_text(url: str) -> str:

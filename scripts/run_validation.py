@@ -32,8 +32,29 @@ CONTACT = [1.0, 0.9, 0.8]
 TREAT = [1.0, 1.1, 1.25, 1.5]
 
 
+def read_cases():
+    """Load the case table, with a clear message if it has not been built."""
+    path = ROOT / "data" / "sti_state_year.csv"
+    try:
+        return pd.read_csv(path)
+    except (OSError, pd.errors.ParserError) as e:
+        raise SystemExit(f"cannot read {path}: {e}. Run scripts/fetch_data.py first.")
+
+
+def write_outputs(res, bt, summ, payload):
+    """Write the three result files; stop with one message if the folder is not writable."""
+    try:
+        res.mkdir(exist_ok=True)
+        bt.to_csv(res / "backtest.csv", index=False, float_format="%.4f")
+        summ.to_csv(res / "summary.csv", index=False)
+        with open(res / "fits.json", "w") as fh:
+            json.dump(payload, fh)
+    except OSError as e:
+        raise SystemExit(f"could not write results to {res}: {e}")
+
+
 def load():
-    d = pd.read_csv(ROOT / "data" / "sti_state_year.csv")
+    d = read_cases()
     series = {}
     for (dis, st), g in d.groupby(["disease", "state"]):
         g = g.sort_values("year")
@@ -105,24 +126,20 @@ def final_one(args):
 
 def main():
     res = ROOT / "results"
-    res.mkdir(exist_ok=True)
     series = load()
     jobs = [(dis, st, y, r) for (dis, st), (y, r) in series.items()]
     with Pool() as pool:
         bt = [row for rows in pool.imap_unordered(backtest_one, jobs, chunksize=2) for row in rows]
-        bt = pd.DataFrame(bt).sort_values(["disease", "state", "origin", "horizon", "model"])
-        bt.to_csv(res / "backtest.csv", index=False, float_format="%.4f")
         finals = pool.map(final_one, jobs, chunksize=2)
+    bt = pd.DataFrame(bt).sort_values(["disease", "state", "origin", "horizon", "model"])
     states_only = bt[bt.state != "United States"]
     summ = (states_only.groupby(["disease", "horizon", "model"]).abs_pct_error
             .agg(median="median", mean="mean", n="count").round(2).reset_index())
-    summ.to_csv(res / "summary.csv", index=False)
     fits = {}
     for dis, st, out in finals:
         fits.setdefault(dis, {})[st] = out
-    with open(res / "fits.json", "w") as fh:
-        json.dump({"contact_multipliers": CONTACT, "treatment_multipliers": TREAT,
-                   "forecast_to": FORECAST_TO, "fits": fits}, fh)
+    write_outputs(res, bt, summ, {"contact_multipliers": CONTACT, "treatment_multipliers": TREAT,
+                                  "forecast_to": FORECAST_TO, "fits": fits})
     print(summ.to_string(index=False))
 
 

@@ -22,6 +22,26 @@ def read_json(path):
             return json.load(f)
     except FileNotFoundError:
         raise SystemExit(f"{path} not found; run the earlier pipeline steps first")
+    except (OSError, json.JSONDecodeError) as e:
+        raise SystemExit(f"cannot read {path}: {e}")
+
+
+def read_summary(path):
+    """Load the backtest summary table, with a clear message if it is missing or damaged."""
+    try:
+        return pd.read_csv(path)
+    except (OSError, pd.errors.ParserError) as e:
+        raise SystemExit(f"cannot read {path}: {e}. Run scripts/run_validation.py first.")
+
+
+def save_figure(fig, name):
+    """Save a figure under results/figures, stopping with a message if that fails."""
+    path = RES / "figures" / name
+    try:
+        path.parent.mkdir(parents=True, exist_ok=True)
+        fig.savefig(path, dpi=160)
+    except OSError as e:
+        raise SystemExit(f"could not write {path}: {e}")
 
 
 def national():
@@ -44,11 +64,11 @@ def national():
         ax.spines[["top", "right"]].set_visible(False)
         ax.legend(frameon=False, fontsize=9)
     fig.tight_layout()
-    fig.savefig(RES / "figures" / "national_fit.png", dpi=160)
+    save_figure(fig, "national_fit.png")
 
 
 def backtest():
-    s = pd.read_csv(RES / "summary.csv")
+    s = read_summary(RES / "summary.csv")
     order = ["integer", "fractional", "persistence", "trend"]
     labels = ["Model,\ninteger", "Model,\nfractional", "Persistence", "Five-year\ntrend"]
     fig, axes = plt.subplots(1, 4, figsize=(12, 3.6))
@@ -65,11 +85,10 @@ def backtest():
             ax.set_ylim(0, g["median"].max() * 1.2)
     axes[0].set_ylabel("Median absolute % error")
     fig.tight_layout()
-    fig.savefig(RES / "figures" / "backtest.png", dpi=160)
+    save_figure(fig, "backtest.png")
 
 
 if __name__ == "__main__":
-    (RES / "figures").mkdir(parents=True, exist_ok=True)
     national()
     backtest()
     print("figures written")
